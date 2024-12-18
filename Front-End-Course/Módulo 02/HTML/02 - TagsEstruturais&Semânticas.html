@@ -1,0 +1,137 @@
+<!-- Tag estrutural Div -> <div></div>:
+        
+        - Também conhecidos como "CAIXAS" as <div> são muito utilizadas e desempenham um papel importante na organização das páginas web. Na prática, as divs definem as divisões da página, funcionando como grandes e pequenos containers para posicionar os conteúdos.
+
+        - As divs também são fundamentais para a contrução de páginas flexíveis, dinâmicas e responsivas, pois as suas divisões permitem uma estilização única ou coletiva por meio do uso de 'classes' e 'ids'.
+
+        - Posso ter diversas divs dentro da minha página, tudo conforme a disposição dos meus elementos.
+
+        - É possível observar que sem estilização as divs ficam posicionadas uma abaixo da outra, no CSS será possível definir o tamanho e a posição de cada uma.
+-->
+
+<div class="header">
+    <h1>Aqui vai a headline principal da minha página</h1>
+    <nav>
+        <a href="">Primeiro link</a>
+        <a href="">Segundo link</a>
+        <a href="">Terceiro link</a>
+        <a href="">Quarto link</a>
+    </nav>
+</div>
+<div class="main">Aqui vai o conteúdo principal da minha página</div>
+<div class="aside">Aqui vai ser um elemento lateral</div>
+<div class="footer">Aqui vai o rodapé da minha página</div>
+
+<!-- Nota relevante
+ 
+        - É possível contruir páginas web com as divs e/ou também com as tags estruturais semânticas que mostraremos logo na sequencia. Cada uso tem a sua vantagem e cabe ao desenvolvedor a tomada de decisão em qual usar.
+
+        - Tags estruturais semânticas: <header>, <main>, <footer>, <aside>, dentre outras..
+        
+            - Tem significado semântico direto ao conteúdo.
+            - Facilitam a compreensão do layout e estrutura da página.
+            - Melhora a acessibilidade, pois as tecnologias assistivas podem entender melhor a estrutura do conteúdo.
+            - Mecanismos de busca (SEO) podem usar as informações semânticas para entender a estrutura e importância do conteúdo.
+
+        - Utilizando divs com classes:
+            
+            - São mais práticas caso precise de mais flexibilidade ou personalização no layout.
+            - Existe a possibilidade de navegadores mais antigos não darem suporte total a tags semânticas HTML5.  
+-->
+
+<!-- Cabeçalho -> <header></header>:
+        
+        - Essa tag define um cabeçalho, ou seja, a parte do topo, onde inicia-se a página.
+
+        - Não há uma regra específica que deve haver nele, porém o que comumente encontramos são: a logo, revelando a identidade da página, links de navegação, textos introdutórios, formulário de pesquisa, e outros.
+-->
+
+<header>
+    <h1>Olá!</h1>
+</header>
+
+<!-- Conteúdo principal -> <main></main>:
+
+        - Essa tag representa o conteúdo principal do seu corpo, ou seja, o conteúdo principal da sua página.
+-->
+
+<main>
+    <h1>Esse é um h1</h1>
+    <p>Sou um parágrafo</p>
+    <button>Sou um botão</button>
+    <p>Estamos todos dentro da tag main</p>
+</main>
+
+<!-- Rodapé -> <footer></footer>:
+    
+        - Essa tag define um rodapé para a página, geralmente utilizadas no final da página.
+-->
+
+<footer>
+    Algumas informações de copyright ou talvez alguma outra informação
+</footer>
+
+<!-- Sessões da página -> <section></section>: 
+
+        - Essa tag define uma sessão para sua página. Utilizando para separar e organizar os conteúdos.
+-->
+
+<section>
+    <h1>Cabeçalho</h1>
+    <p>O resto do contéudo do seu site</p>
+</section>
+
+<!-- Artigos -> <article></article>:
+    
+        - Essa tag define um artigo da sua página. Ela é utilizada para criação de blogs, um artigo de revista ou jornal, página de conteúdos e etc.
+
+        - É usada para definir contepudos independentes, ou seja, o navegador reconhece que o conteúdo dessa tag é uma unidade distinta e relevante por si só.
+-->
+
+<article>
+    <h1>Tema de Um artigo </h1>
+    <p>xsnjnducduc d jvvnennd nnueniwenod ewnenunfec dnicnuc wiwdjueb jdndbucbc bub8ub</p>
+</article>
+
+<article>
+    <h1>Tema de Um artigo </h1>
+    <p>xsnjnducduc d jvvnennd nnueniwenod ewnenunfec dnicnuc wiwdjueb jdndbucbc bub8ub</p>
+</article>
+
+<article>
+    <h1>Tema de Um artigo </h1>
+    <p>xxsnjnducduc d jvvnennd nnueniwenod ewnenunfec dnicnuc wiwdjueb jdndbucbc bub8ub
+    <p>
+</article>
+
+<!-- Conteúdo laderal -> <aside></aside>:
+ 
+        - A tag <aside> é utilizada para apresentar um conteúdo que está relacionando ao conteúdo principal da página, e que pode ser considerado como um 'extra' ou um conteúdo secundário. Comumente é utilizada para incluir elementos como barras laterias, notas, informações adicionais ou qualquer conteúdo que faça relação com o conteúdo principal da página.
+
+        - O conteúdo da tag <aside> geralmente não é considerado vital para compreensão do conteúdo da página, mas ainda assim é relevante e complementar. Em um artigo, é comum encontrar links relacionados, informações adicionais ou até mesmo anúncios.
+-->
+
+<main>
+    <h1>Eu amo o DevClub!</h1>
+</main>
+<aside>
+    <h4>DevClub</h4>
+    <p>
+        DevClub é uma formação completa de programação,
+        onde você sai do completo zero ao avançado,
+        se tornando um programador full stack.
+    </p>
+</aside>
+
+<!-- Navegação -> <nav></nav>: 
+ 
+        - Essa tag define um conteúdo de navegação. Por isso, é muito utilizado em conjunto com listas e na criação de menus, ou seja, uma seção com links de navegação.
+-->
+
+<nav>
+    <ul>
+        <li><a href="#">Página Principal</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,510 @@
+<!-- Formulário -> <form></form>:
+ 
+        - Formulários HTML são elementos fundamentais na interatividades das páginas. Com eles é possível que os usuários forneçam dados que podem ser enviados para os servidores para processamento.
+
+        - Os formulários são formados por um conjunto de tags, dentre as principais: <form>, <textarea>, <select>, dentre outras.
+
+        - A tag form é usada para envolver todos os elementos do formulário e definir como os dados serão enviados. Os inputs coletam diversos tipos de dados como texto, senhas, dentre outros, o textarea é utilizado para textos mais longos e o select para listas.
+
+        - Com o javascript é possivel adicionar interatividade ao formulário, como validações, atualização dinâmica de campos e manipulação de eventos.
+
+        - No exemplo abaixo temos um formulário de contato com três campos obrigatórios devido ao atributo 'required'. Neles recebemos o nome, e-mail e a mensagem do usuário. Há um botão com o seu type='submit', quando temos dentro de uma tag <form>, um botão com o type submit, segnifica que ao ser clicado ele íra enviar os dados para onde for definido na tag form. No exemplo adicionamos uma função javascript que coletou os dados e os mostrou no console.
+
+        - Caso não tenha visto nada de javascript ainda não se preocupe, logo mais esse conteúdo ficará mais claro.
+-->
+
+<!-- // Basicamente a tag form envolve todos os elementos do formulário -->
+<form onsubmit="enviarFormulario(e)">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+    function enviarFormulario(e) {
+        event.preventDefault();
+
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var mensagem = document.getElementById("mensagem").value;
+
+        var dadosFormulario = {
+            nome: nome,
+            email: email,
+            mensagem: mensagem
+        };
+
+        console.log("Dados do Formulário:", dadosFormulario);
+    }
+</script>
+
+<!-- inputs -> <input />:
+ 
+        - Os inputs são os locais onde é possível entra diversos tipos de dados. Eles se diferenciam por meio do atributo 'type'.
+
+        - Os atributos type têm valor semântico pois define o tipo de controle de entrada que será exibido na interface do usuário. A escolha do tipo não interfere apenas na aparência, mas também influência como o usuário interfere com o campo de entrada e como os dados são tratados.
+
+        - Alguns exemplos de valores do atributo 'type' logo abaixo.
+-->
+
+<!-- Tarefa: Iniciar um novo projeto e experimentar cada tipo de input. -->
+// Campo para entrada de texto, aqui o usuário pode digitar qualquer texto
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+
+// Campo para entrada de email
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" required>
+
+// O input também pode ser utilizado como um botão
+<label for="button">Botão:</label>
+<input type="button" id="button" value="Clique-me" />
+
+// O input checkbox pode ser marcado ou desmarcado. O atributo checked
+// quer dizer que ele se iniciará marcado.
+<label for="checkbox">Checkbox:</label>
+<input type="checkbox" id="checkbox" name="checkbox" checked />
+<label for="checkbox">Aceito os termos</label>
+
+// O input color funciona como seletor de cor, no value define-se a cor inicial
+<label for="color">Cor:</label>
+<input type="color" id="color" name="color" value="#ff0000" />
+
+// O input date serve para datas
+<label for="date">Data:</label>
+<input type="date" id="date" name="date" />
+
+// Esse é para Data e hora
+<label for="datetime-local">Data e Hora Local:</label>
+<input type="datetime-local" id="datetime-local" name="datetime-local" />
+
+// O input tipo file serve para upload de arquivos, é possível definir
+// os formatos que serão aceitos
+<label for="file">Arquivo:</label>
+<input type="file" id="file" name="file" />
+
+// O hidden fica invisível
+<label for="hidden">Campo Oculto:</label>
+<input type="hidden" id="hidden" name="hidden" value="valor_oculto" />
+
+// Um imput com formato de imagem
+<label for="image">Imagem:</label>
+<input type="image" id="image" name="image" src="https://via.placeholder.com/50" alt="Botão de Imagem" />
+
+// Input para entrada de mês
+<label for="month">Mês:</label>
+<input type="month" id="month" name="month" />
+
+// Input para entrada de número
+<label for="number">Número:</label>
+<input type="number" id="number" name="number" min="1" max="10" value="5" />
+
+// Input para entrada de senha onde os caracteres ficam escondidos
+<label for="password">Senha:</label>
+<input type="password" id="password" name="password" />
+
+// Input com botões de única ou múltipla escolha. Caso o name seja igual
+// para todas as opções, só será possível escolher uma
+<label for="radio">Botões de Rádio:</label>
+<input type="radio" id="radio1" name="radio" value="opcao1" checked />
+<label for="radio1">Opção 1</label>
+<input type="radio" id="radio2" name="radio" value="opcao2" />
+<label for="radio2">Opção 2</label>
+
+// Inputs para intervalos
+<label for="range">Intervalo:</label>
+<input type="range" id="range" name="range" min="0" max="100" value="50" />
+
+// Input para limpar todo o formulário
+<label for="reset">Resetar:</label>
+<input type="reset" id="reset" value="Limpar" />
+
+// Input para pesquisar
+<label for="search">Busca:</label>
+<input type="search" id="search" name="search" placeholder="Pesquisar..." />
+
+// Input com função de botão submit
+<label for="submit">Enviar:</label>
+<input type="submit" id="submit" value="Enviar Formulário" />
+
+// Input para entrada de telefone
+<label for="tel">Telefone:</label>
+<input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" />
+
+// Input para texto
+<label for="text">Texto (Padrão):</label>
+<input type="text" id="text" name="text" placeholder="Digite seu texto" required />
+
+// Input para hora
+<label for="time">Hora:</label>
+<input type="time" id="time" name="time" />
+
+// Input para link
+<label for="url">URL:</label>
+<input type="url" id="url" name="url" placeholder="https://example.com" />
+
+// Input para Semana
+<label for="week">Semana:</label>
+<input type="week" id="week" name="week" />
+
+<!-- Botão -> <button></button>:
+    
+        - Os botões são elementos cruciais na interatividade dentro de uma página web. dentro das nossas páginas, podemos ter diversas açoes, como o envio de um formulário, a execução de uma função que faz algum cálculo, a troca de light mode para dark mode, e outra infinidade de coisas conforme a imaginação do dev. Sabemos que essas ações são acionadas por meio de eventos, e um evento que o button é especialista é o evento de clique.
+
+        - Clique em um button e o faça feliz.
+
+        - Assim como os inputs, os buttons aceitam o atributo type. Em seus usos mais comuns temos:
+-->
+
+<!-- // Botão SIMPLES -->
+<button>Enviar</button>
+
+
+<form>
+    <!-- Botão de Envio dos dados -->
+    <button type="submit">Enviar</button>
+
+    <!-- Botão para redefinir -->
+    <button type="reset">Redefinir</button>
+</form>
+
+<!-- Botões para acionar ações do lado do cliente usando Javascript por meio do evento de clique -->
+<button onclick="minhaFuncao()">Clique-me</button>
+
+<!-- Botões que acionam ações na interface -->
+<button onclick="abrirMenu()">Abrir Menu</button>
+
+<!-- Botões aceitam outras tags em seu conteúdo -->
+<button>
+    <img src="icone.png" alt="Ícone">
+    Clique em mim
+</button>
+
+<!-- A aparência e o comportamento padrão dos botões podem ser alterados usando CSS -->
+
+<!-- Links -> <a></a>: -->
+
+<!-- - A tag <a> (âncora) no HTML tem o seguinte formato: -->
+<a href="https://www.google.com">Clique aqui e vá para o Google</a>
+<!-- Nesta tag, podemos notar a presença crucial do href. HREF é uma abreviação de "hypertext reference" em inglês, que traduzido é "referência de hipertexto". Na prática, ele é utilizado para especificar o destino de um link em um documento HTML. -->
+
+<!-- Dentre as utilidades da tag, temos: -->
+
+<!-- Links para outras páginas dentro do mesmo site ou links para páginas externas. -->
+<a href="pagina_interna.html">Página Interna</a>
+<a href="https://www.outrasite.com">Outro Site</a>
+
+<!-- Navegação interna entre secões específicas da mesma página utilizando "ids" -->
+<a href="#secao1">Ir para Seção 1</a>
+...
+<h2 id="secao1">Seção 1</h2>
+
+<!-- Download de arquivos -->
+<a href="material_de_apoio.pdf" download>Download do Documento</a>
+
+<!-- Envio de emails -->
+<a href="mailto:suporte@devclub.com.br">Enviar E-mail</a>
+
+<!-- link para outros recursos -->
+<a href="imagem.jpg">Abrir Imagem</a>
+<a href="video.mp4">Assistir ao Vídeo</a>
+
+<!-- links para redes sociais -->
+<a href="https://www.youtube.com/rodolfomori" target="_blank">You Tube</a>
+<a href="https://www.instagram.com/rodolfomorii" target="_blank">Instagram</a>
+<!-- Nessa demonstraçÕ pudemos notar a presença do "target=_blanck". Adicionamos esse atributo para que o nosso link seja aberto em uma nova aba. 
+ 
+    - Geralmente utilizamos esse recurso quando queremos manter o usuário no nosso site, mesmo que ele clique para ir para outro ambiente. Cabe uma observação para o uso dos navegadores em dispositivos móveis na qual na maioria das vezes o usuário se perde com as abas abertas, e se nesse caso ele tentar voltar para sua página, ele não conseguirá, até que encontre a aba correta.
+
+    - Tags de âncora podem ser customizadas com CSS e podem assumir até o formato de um botão caso o desencolvendor queira.
+
+    - Também é possível adicionar a tag <a> dentro de outras tags ou por fora também.
+
+    - Por exemplo:
+        
+        - Caso queira que quando o usuário clicar em qualquer lugar dentro de uma div, ele seja direcionado para algum local: 
+-->
+<a href="https://www.exemplo.com">
+    <div>
+        <!-- Conteúdo da div, que pode incluir texto, imagens, etc. -->
+        Clique aqui para ser direcionado
+    </div>
+</a>
+
+<!-- Bônus -> Atributo Title
+
+        - O atributo "title" é utilizado dentro das tags HTML para fornecer informações adicionais sobre um elemento. A informação adicionada no atributo "title" somente é mostrada quando o usuário passar o mouse sobre o item.
+-->
+<a href="https://comunidade.devclub.com.br/home" title="Visite nossa Comunidade">
+    Clique aqui
+</a>
+<!-- O uso do atributo title é uma boa prática recomendada para melhorar a acessibilidade (pois os mecanismos de leitura de tela os reconhecem), e usuabilidade de um site, fornecendo informações adicionais ou explicativas sobre determinados elementos. -->
+
+<!-- Imagem - <img>:
+        - A tag <img> é usada para incorporar imagens dentro de uma página Web.
+-->
+<h1>Eu amo meu cachorro</h1>
+<img src="foto-de-cachorro.jpg" alt="foto do meu cachorro">
+<!-- Como pudemos ver, a tag <img> é composta por dois atributos principais, o src (source) que é um atributo obrigatório e especifica o caminho ou URL da imagem. 
+    
+    - O outro atributo principal que pudemos ver na tag <img> foi o “alt”. O alt fornece um texto alternativo para a imagem, e é exibido caso a imagem não seja carregada. O alt também é utilizado por leitores de tela para fins de acessibilidade.
+
+    - A tag <img> não precisa de fechamento, e também aceita os parâmetros width e heigth para definir largura e altura.
+-->
+<img src="imagem.jpg" alt="Descrição da imagem" width="300" height="200">
+<!-- Alguns atributos são opcionais e pode ser adicionados na tag <img> para melhorar a experiência do usuário. Tais como: 
+ 
+    - title → Fornece um texto de dica que aparece quando o usuário passa o mouse sobre a imagem.
+
+    - loading → Especifica como a imagem deve ser carregada. Podendo ser: “auto” (padrão), “eager”(carregamento imediato) ou “lazy”(carregamento preguiçoso, útil para otimização de desempenho).
+
+    - style → usado para aplicar estilos diretamente na imagem para alterar a borda por exemplo.
+-->
+<img src="logo.png" alt="Logo DevClub" title="Logo do DevClub colorida" width="800" height="600"
+    style="border: 1px solid #ccc;">
+
+<!-- Vídeo - <video></video>:
+
+        - A tag <video> é utilizada para incorporar conteúdo em vídeo em uma página web.
+-->
+<h1>Meu vídeo</h1>
+<video src="1063472734-preview.mp4" autoplay poster="imagemprevia.jpg"></video>
+
+<!-- Dentre os atributos importantes na tag <video>, temos o src. No src é especificado o caminho do vídeo ou a URL.  -->
+<video src="video.mp4"></video>
+
+<!-- Outros atributos que a tag <vídeo> aceita são:
+    
+    - controls → Adiciona controles de reprodução ao vídeo, como play, pause, volume e barra de progresso.
+
+    - width e height → Especificam a largura e altura em pixels do elemento do vídeo.
+
+    - autoplay → Inicia automaticamente a reprodução assim que a página é carregada.
+
+    - loop → Faz com que o vídeo reinicie automaticamente quando atinge o final.
+
+    - poster → Especifica uma imagem de cara que será exibida antes do vídeo ser reproduzido.
+
+    - preload → Especifica se o vídeo deve ser carregado automaticamente quando a página é carregada.
+
+    - muted → inicia o vídeo com audio desativado.
+
+    - controlslist → especifica como os controles de mídia são apresentados. Os valores possíveis incluem “nodownload”, “nofullscreen”, e “noremoteplayback”.
+
+    Obs: Navegadores como Google Chrome não reproduz  o vídeo no autoplay se estiver com o som ativo. Para que seja reproduzido, adicionar o muted. E o **poster** não aparece em **autoplay**. 
+-->
+
+<!-- Lista Ordenada (Ordered List) - <ol></ol>:
+ 
+    - A tag <ol> é usada para criar listas ordenadas, onde cada item é numerado automaticamente. Os itens são geralmente exibidos com números (1, 2, 3, ...) por padrão, mas isso pode ser personalizado com CSS.
+-->
+<ol>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>terceiro item</li>
+</ol>
+
+<!-- Lista Desordenada (Unordered List) - <ul></ul>:
+ 
+    - A tag <ul> é usada para criar listas não ordenadas, onde cada item é marcado com um símbolo (normalmente um ponto, um quadrado, ou um círculo).
+-->
+<ul>
+    <li>Café</li>
+    <li>Chá</li>
+    <li>Leite</li>
+</ul>
+<!-- NOTA: As tags <ol> e <ul> suportam o atributo type, que pode ser usado para especificar o tipo de marcação dos itens da lista. Os valores mais usados incluem “1” (números), “A” ou “a” (para letras maiúsculas e minuúsculas), “I” (números romanos), e “i” (para números romanos minúsculos). -->
+
+<!-- Lista dos Itens de um elemento HTML - <li></li>:
+ 
+    - A tag <li> é usada para definir cada item dentro de uma lista, seja ela ordenada (<ol>) ou não ordenada (<ul>).
+-->
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+
+<!-- Tabela - <table></table>: 
+ 
+    - A tag <table> em HTML é usada para criar tabelas, que são estruturas utilizadas para organizar dados em linhas e colunas.
+
+    - A estrutura básica de uma tabela inclui a tag <table> para definir a tabela como um todo, <tr> para representar as linhas (table rows), <th> para os cabeçalhos da tabela )table heads), e <td> para os dados da tabela (table data).
+-->
+<h2>Tabela de Exemplo</h2>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>30</td>
+    </tr>
+</table>
+
+<!-- Área de texto <textarea>:
+    
+    - A tag `<textarea>` é utilizada para criar um campo de texto multi-linha em um formulário, onde os usuários podem inserir texto com mais de uma linha.
+-->
+<form>
+    <p><label>Porque eu quero ser um Programador(a):</label></p>
+    <textarea rows="4" cols="50">Porque eu...</textarea>
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+<!-- 
+    - O atributo `rows` define o número de linhas visíveis no campo texto
+
+    - O atributo `cols` define o número de colunas visíveis no campo texto
+
+    - Caso deseje utilizar o <textarea> como “somente leitura”, basta adicionar o atributo readonly, dessa forma os usuários só podem visualizar o texto, e não editá-lo.
+ -->
+<textarea readonly rows="4" cols="50">Texto somente leitura aqui...</textarea>
+
+<!-- Uma nota importante a ser lembrada é de adicionar na estilização do textarea o estilo "resize: none”. Esse estilo impedirá que o usuário redimensione o <textarea>manualmente. -->
+
+<!-- Lista suspensa - <select> </select>:
+
+    - A tag <select> é usada para criar listas suspensas (dropdowns) em formulários, permitindo a escolha entre as opções da lista. A tag <option> é utilizada dentro da tag <select> para definir as opções disponíveis na lista.  
+-->
+<label for="cars">Escolha um carro:</label>
+<select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Audi</option>
+    <option value="opel">Mercedes</option>
+    <option value="audi">Porsche</option>
+</select>
+
+<!-- Utilizando o atrubuto selected é possível definir um valor padrão -->
+<form>
+    <label for="frutas">Escolha uma fruta:</label>
+    <select id="frutas" name="frutas">
+        <option value="maca">Maçã</option>
+        <!-- // Dessa forma a banana começa selecionada -->
+        <option value="banana" selected>Banana</option>
+        <option value="laranja">Laranja</option>
+        <option value="uva">Uva</option>
+    </select>
+</form>
+
+<!-- Adicionando o atributo multiple, permitimos que o usuário selecione mais de uma opção pressionando a tecla "Ctrl" (ou "Cmd" em Mac) enquanto clica. -->
+<form>
+    <label for="frutas">Escolha frutas (múltipla seleção):</label>
+    <select id="frutas" name="frutas" multiple>
+        <option value="maca">Maçã</option>
+        <option value="banana">Banana</option>
+        <option value="laranja">Laranja</option>
+        <option value="uva">Uva</option>
+    </select>
+</form>
+
+<!-- Podemos usar a tag <optgroup> para agrupar opções relacionadas -->
+<form>
+    <label for="frutas">Escolha uma fruta:</label>
+    <select id="frutas" name="frutas">
+        <optgroup label="Cítricas">
+            <option value="laranja">Laranja</option>
+            <option value="limao">Limão</option>
+        </optgroup>
+        <optgroup label="Frutas Vermelhas">
+            <option value="morango">Morango</option>
+            <option value="cereja">Cereja</option>
+        </optgroup>
+    </select>
+</form>
+
+<!--
+    - Observação:
+
+    - Pudemos notar nos exemplos de aplicação a presença do atributo `value`, ele serve para especificar o valor associado a uma determinada opção selecionada. Esse valor será enviado para o servidor quando o formulário for submetido.
+
+    - Na ausência do `value`, o valor textual será enviado para o servidor.
+
+    - Exemplo:
+
+        - Digamos que o Desenvolvedor decidiu guardar no servidor ao invés do nome, o código do produto selecionado. Dentro do `option` ele pode adicionar o nome do produto, e no `value` ele pode adicionar o código do produto. Dessa forma o usuário vê o nome, entretanto o código é enviado pelo formulário.
+-->
+<select name="fruits">
+    <option value="apple">Maçã</option>
+    <option value="banana">Banana</option>
+    <option value="orange">Laranja</option>
+    <option value="grape">Uva</option>
+</select>
+
+<!-- Incorporando com o - <iframe>:
+    
+    - O <iframe> é a tag utilizada para incorporar conteúdo externo, como páginas da web, documentos PDF, vídeos, mapas, entre outros, dentro de uma página HTML.
+
+    - Exemplo de incorporação de página web:
+-->
+<h1>Exemplo de iframe adicionando o site da Globo:</h1>
+
+<iframe src="https://www.globo.com/" title="Globo">
+</iframe>
+
+<!-- A tag `<iframe>` aceita os atributos:
+
+        - src → onde especificamos o conteúdo a ser incorporado.
+
+        - width e height → para definir largura e altura.
+
+        - frameborder → para definir se deve ou não existir borda ao redor.
+
+        - allowfullscreen → Para permitir ou impedir que o conteúdo seja exibido em tela cheia.
+
+    - Incorporando vídeo do Youtube (Substitua o VIDEO_ID pelo ID do vídeo específico que deseja incorporar) 
+-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen>
+</iframe>
+
+<!-- Incorporando mapa do google (Substitua "LATITUDE" e "LONGITUDE" pelas coordenadas do local desejado no Google Maps) -->
+<iframe width="600" height="450"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.979828116144!2dLONGITUDE!3dLATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDE0JzI4LjQiTiBMQVUgMTcwLjIuMCJX!5e0!3m2!1sen!2sus!4v1566410578753!5m2!1sen!2sus"
+    frameborder="0" style="border:0;" allowfullscreen="">
+</iframe>
+
+<!-- Incorporando PDF -->
+<p>Documento PDF Incorporado</p>
+<iframe src="exemplo.pdf" width="800" height="600" frameborder="0"></iframe>
+
+<!-- Nota importante:
+
+    - Ao incorporar conteúdo externo usando **`<iframe>`**, é importante garantir que o conteúdo seja confiável, pois ele pode executar scripts e interagir com a página principal.
+-->
+
+<!-- Comentários - <!—  —>:
+ 
+    - No HTML, os comentários são utilizados para adicionar anotações ou informações que não serão exibidas na página web renderizada pelo navegador. Eles são úteis para documentar o código, fazer anotações para outros desenvolvedores ou desativar temporariamente parte do código. Comentários em HTML são delimitados pelos caracteres <!-- (abertura) e -->
+(fechamento).
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Comentários</title>
+</head>
+
+<body>
+
+    <!-- Olá, sou apenas um comentário -->
+
+    <h1>Página de Exemplo</h1>
+    <p>Olá, sou um parágrafo</p>
+
+</body>
+
+</html>
+<!-- O atalho utilizado para inserir comentários no HTML é `Control + /`, Control + : ou `command + /` no mac. -->

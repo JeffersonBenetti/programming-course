@@ -1,0 +1,113 @@
+<!-- Parágrafo -> <p></p>: 
+ 
+    - Tag utilizada para inserir textos como parágrafo. 
+ 
+    - A tag parágrafo, tanto quanto as demais podem ser customizadas utilizando o CSS posteriormente.
+-->
+
+<p>Meu parágrafo</p>
+<p>Outro parágrafo</p>
+
+<!-- Título -> <h1> a <h6>:
+
+        - Os títulos em HTML vão de h1 até h6. Sendo h1 o título de maior importância na página, e h6 de menor importância.
+
+        - Quando falamos de importância, estamos nos referindo a importância Semântica. Isso na prática quer dizer que os motores de busca e os leitores de tela utilizam essas tags para entender a estrutura hierárquica do conteúdo de uma página web.
+
+        - No seu uso, <h1> é utilizado para definir o título principal da página, e as demais tags <h2> até <h3>..., devem ser utilizadas para indicar as subseções em ordem hierárquica.    
+    -->
+
+<h1>Título um</h1>
+<h2>Título dois</h2>
+<h3>Título três</h3>
+<h4>Título quatro</h4>
+<h5>Título cinco</h5>
+<h6>Título seis</h6>
+
+<!-- Span -> <span></span>:
+            
+        - A tag Span é uma tag de container definida como um container genérico e é utilizada para aplicar estilos ou identificar partes específicas do texto. É muito útil quando partes do texto necessitam de uma formatação especial, sem alterar o significado ou a estrutura geral do documento.
+
+        - Vale ressaltar que a tag <span> não tem valor semântico próprio e é comumente utilizada para aplicar ou manipular estilos em conjunto com o javascript.
+-->
+
+<p>Vamos utilizar o <span>Span</span> nesse parágrafo</p>
+
+<!-- No exemplo acima a tag span me permite que eu altere por exemplo: a cor, o tamanho, ou seja, qualquer atributo da palavra "span" sem que esses atributos interfiram na minha tag de parágrafo. -->
+
+<!-- Strong -> <strong></strong>:
+            
+        - A tag define um texto importante ou enfatizado, geralmente colocado em negrito.
+
+        - Assim como com a tag <span>, no uso da tag <strong> é possível customizar diversos atributos. Entretanto, vale salientar que a tag <strong> tem um valor semântico e serve para enfatizar que o texto que ela envolve é importante. Dessa forma, os mecanismos de busca e leitores de tela dão maior importância para essa parte do texto.
+
+        - Em resumo, a tag strong auxilia na acessibilidade e compreensão do conteúdo pelos leitores de tela e mecanismos de busca.    
+-->
+
+<p>Vamos utilizando a tag <strong>Strong</strong> nesse parágrafo</p>
+
+<!-- Label -> <label></label>:
+
+        - A tag <label>, que traduzida quer dizer rótulo, é utilizada para associar um rótulo a um elemento de controle de uma formulário, inserindo uma descrição textual para um campo específico, facilitando a compreensão do usuário.
+
+        - Em termos de valor semântico, a <label> tem a capacidade de melhorar a experiência do usuário, tornando os formulários mais acessivéis e compreenssíveis até mesmo para usuário com deficiência visuais que dependem dos leitores de tela.
+
+        - Quando falamos de formulários, estamos falando de uma parte muito importante dentro de uma página web interativa. Por meio dos formulários, é possível que os usuários forneçam dados que podem ser guardados em servidores web para processamento.
+
+        - Veremos adiante as tags importantes para os formulários.
+-->
+
+<h1>Exemplo de formulário com label</h1>
+<form>
+        <label>Nome:</label>
+        <input type="text" />
+
+        <label>Idade:</label>
+        <input type="number" />
+
+        <button type="submit">Enviar formulário</button>
+</form>
+
+<!-- Negrito -> <b></b>:
+ 
+        - A tag <b> deixa o seu texto em negrito. Ela não tem valor semântico, somente visual. 
+-->
+
+<p>Texto em <b>Negrito</b></p>
+
+<!-- Itálico -> <i></i>:
+        
+        - A tag <i> deixa o seu texto em itálico. Assim como a tag <b>, ele não tem valor semântico, somente visual. 
+-->
+
+<p>Texto em <i>Itálico</i></p>
+
+<!-- Sublinhado e Riscado -> <u></u> e <s></s>: 
+ 
+        - Importante salientar que essas tags raramente serão encontradas. Isso porque é possível adicionar essas estilizações utilizando o CSS.
+
+        - Textos Riscados são ignorados pelos leitores de tela.
+
+        - É importante ter cuidado com o uso do sublinhado nas páginas web, pois os usuários podem interpretar palavras sublinhadas como links.
+-->
+
+<u>Texto com Sublinhado</u>
+<s>Texto com Riscado</s>
+
+<!-- Quebra de linha -> <br>:
+ 
+        - Essa tag não necessita de fechamento. Sua função é a quebra de linha.
+-->
+
+<p>Primeiro texto</p><br>
+<p>Segundo texto</p><br>
+<p>Terceiro texto</p><br>
+
+<!-- Título do site -> <title></title>:
+ 
+        - A tag <title> fica dentro da tag <head>, e nela é definido o título do documento. Essa informação é mostrada na barra de título dos navegadores.
+                
+        - A tag <title> também tem um papel inportane para o SEO (Search Engine Optimization). Ela desempenha um papel importante na comunicação com os motores de busca, como por exemplo o Google.
+-->
+
+<title>Título do meu site</title>
