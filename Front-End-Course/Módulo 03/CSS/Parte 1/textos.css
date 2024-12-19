@@ -1,0 +1,195 @@
+/* - PROPRIDADES DE TEXTO:
+
+        - Nessa sessão veremos algumas das principais propriedades utilizadas para customizar textos em páginas HTML.
+*/
+
+/* 
+    - TEXT:
+
+        - A propriedade text e suas variações são propriedades independentes que são utilidadas para controlar diferentes aspectos do texto em um elemento HTML.
+
+    - TEXT-ALIGN:
+
+        - Controla o alinhamento do texto dentro de um elemento. Pode ter valores como left, right, center e justify.
+
+- Exemplo: 
+*/
+
+p {
+    text-align: center;
+}
+
+/* 
+    - TEXT-TRANSFORM:
+
+        - Define a transformação do texto, como torná-lo maiúsculo, minúsculo ou capitalizado.
+
+    - Valore que o text-transform pode receber:
+
+        - UPPERCASE: Transforma todo o texto para letras maiúsculas. 
+*/
+
+p {
+    text-transform: uppercase;
+}
+
+/* - LOWERCASE: Transforma todo o texto para letras minúsculas. */
+
+p {
+    text-transform: lowercase;
+}
+
+/* - CAPITALIZE: Transforma a primeira letra de cada palavra em maiúscula. */
+
+p {
+    text-transform: capitalize;
+}
+
+/* - NONE: Não aplica nenhuma transformação ao texto. O texto é exibido conforme está na fonte. */
+
+p {
+    text-transform: none;
+}
+
+/* - Estes valores são utilizados para modificar o caso das letras no texto, proporcionando diferentes estilos de exibição. Escolha o valor que melhor atenda aos requisitos de design do seu projeto. */
+
+/* 
+    - TEXT-INDENT: Define o recuo da primeira linha de um bloco de texto. 
+
+    - Exemplo:
+*/
+
+p {
+    text-indent: 20px;
+}
+
+/* - Nota: Os valores podem ser definidos em `pixels`, em `porcentagem`, e em `valores relativos`. */
+
+/* 
+    - FONT:
+
+    - A propriedade font é uma propriedade composta que permite ao desenvolvedor definir várias propriedades em uma únida declaração.
+
+    - Dentre as mais usadas variações das propriedades relacionadas a fonte temos:
+
+    - FONT-STYLE: Define o estilo da fonte, como normal, itálico ou oblíquo. 
+*/
+
+p {
+    font-style: italic;
+}
+
+/*​
+    - FONT-VARIANT: Define a variante da fonte, como normal ou small-caps.
+*/
+
+p {
+    font-variant: small-caps;
+}
+
+/*​
+    - FONT-WEIGHT: Define a espessura da fonte, como normal, bold ou um valor numérico.
+*/
+
+p {
+    font-weight: bold;
+}
+
+​
+/*
+   - FONT-SIZE: Define o tamanho da fonte. Pode ser especificado em unidades como pixels, em, rem, porcentagem, etc.
+*/
+
+p {
+    font-size: 16px;
+}
+
+/*​
+    - FONT-FAMILY: Define a família de fontes, indicando uma ou mais fontes preferidas.
+*/
+
+p {
+    font-family: "Helvetica", sans-serif;
+}
+
+/* - Você pode combinar essas propriedades conforme necessário para ajustar a aparência da fonte no seu documento HTML. Por exemplo: */
+
+p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+}
+
+/* - Agora, se preferir agrupar essas propriedades usando a propriedade font, isso seria feito assim: */
+
+p {
+    font: italic bold 18px "Times New Roman", serif;
+}
+
+/* - Ambas as abordagens são válidas, e a escolha dependerá da complexidade do seu estilo de fonte e de suas preferências pessoais.
+
+    - Exemplo: 
+*/
+
+h1 {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic
+}
+
+/* 
+    - LETTER-SPACING: 
+
+    - A proprieddade letter-spacing é utilizada para controlar o espaçamento entre caracteres de um texto.
+
+    - Exemplo:
+*/
+
+p {
+    letter-spacing: 2px;
+    /* Aumenta o espaçamento entre os caracteres em 2 pixels */
+}
+
+p {
+    letter-spacing: -1px;
+    /* Reduz o espaçamento entre os caracteres em 1 pixel */
+}
+
+/* 
+    - Essa propriedade é útil quando você deseja ajustar sutilmente o espaçamento entre as letras para melhorar a legibilidade ou obter um efeito de design específico. 
+
+    - Exemplo:
+*/
+
+h1 {
+    letter-spacing: 4.9px;
+}
+
+/* 
+    - LINE-HEIGHT: 
+    
+    - A propriedade line-height define a altura da linha em um bloco de texto. Pode ser definida como um número puro (múltiplo da altura da fonte) ou como uma unidade específica.
+
+    - Exemplo:
+*/
+
+p {
+    line-height: 1.5;
+    /* Define a altura da linha como 1,5 vezes a altura da fonte */
+}
+
+p {
+    line-height: 24px;
+    /* Define a altura da linha como 24 pixels */
+}
+
+/* 
+    - O line-height é crucial para o espaçamento vertical entre linhas de texto. Um valor adequado pode melhorar a legibilidade do texto e afetar a aparência geral do layout. Quando o valor é unitless (um número puro), ele é multiplicado pelo tamanho da fonte do elemento, o que permite que a altura da linha seja proporcional ao tamanho da fonte. 
+
+    - Exemplo:
+*/
+
+h1 {
+    line-height: 90px;
+}

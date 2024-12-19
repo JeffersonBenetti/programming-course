@@ -1,0 +1,80 @@
+/*  
+    - SELETORES CSS:
+    
+    - Os seletores CSS são parte fundamental das regras de estilo CSS e são usados para direcionar elementos HTML específicos aos quais você deseja aplicar estilos. Eles definem quais elementos no seu documento HTML receberão as propriedades e valores CSS que você especificar. Aqui estão alguns dos seletores CSS mais comuns e uma explicação de como eles funcionam:
+    
+    - SELETORES TIPO: 
+        - Selecionam todos os elementos de um tipo específico.
+
+    - Exemplo: 
+*/
+
+p {
+    color: blue;
+}
+
+/* - Nesse caso, todos os parágrafos <p> no documento terão a cor do texto definida como azul.*/
+
+/* 
+    - SELETORES DE CLASSES: 
+        - Selecionam elementos com uma determinada classe. As classes são atributos HTML que você pode adicionar a elementos para identificá-los.
+
+    - Exemplo:
+        - <p class="destaque">Este é um parágrafo de destaque.</p> 
+*/
+.destaque {
+    background-color: yellow;
+}
+
+/* O seletor .destaque selecionará todos os elementos com a classe "destaque" e aplicará um fundo amarelo a eles.*/
+
+/* 
+    - SELETORES DE ID: 
+        - Selecionam um elemento com um ID específico. Os IDs são exclusivos para cada elemento no documento HTML.
+
+    - Exemplo: 
+        - <div id="cabecalho">Este é o cabeçalho do site.</div>
+*/
+#cabecalho {
+    font-size: 24px;
+}
+
+/* O seletor #cabecalho selecionará o elemento com o ID "cabecalho" e definirá o tamanho da fonte para 24 pixels.*/
+
+/* 
+    - SELETORES DE FILHO DIRETO:
+        - Selecionam elementos que são filhos diretos de outros elementos.
+
+    - Exemplo:
+ */
+div>p {
+    margin: 10px;
+}
+
+/* Este seletor seleciona todos os elementos <p> que são filhos diretos de elementos <div>, aplicando uma margem de 10 pixels a eles.*/
+
+/* 
+    - SELETORES DE ATRIBUTOS: 
+        - Selecionam elementos com atributos HTML específicos.
+
+    - Exemplo: 
+*/
+a[target="_blank"] {
+    color: red;
+}
+
+/* Este seletor seleciona todos os links <a> que têm o atributo target definido como "_blank" e define a cor do texto como vermelha.*/
+
+/* 
+    - SELETORES DE PSEUDOCLASSE: 
+        - Selecionam elementos com base em estados ou interações do usuário.
+
+    - Exemplo: 
+*/
+a:hover {
+    text-decoration: underline;
+}
+
+/* Este seletor seleciona links <a> quando o cursor do mouse passa sobre eles e sublinha o texto quando isso acontece.*/
+
+/* Esses são apenas alguns exemplos de seletores CSS. Os seletores permitem uma grande flexibilidade ao aplicar estilos a elementos HTML específicos em seu documento, permitindo que você crie layouts e designs personalizados. */

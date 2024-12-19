@@ -1,0 +1,57 @@
+/* - COLOR:
+    
+    - A propriedade color é utilizada para definir a cor de um texto. 
+    
+    - As cores podem ser especificadas de diversas maneiras, incluindo os formatos RGB, hexadecimal, nome da cor e outros. Abaixo temos alguns exemplos. 
+*/
+
+/* - 1°. HEXADECIMAL: 
+
+        - O formato hexadecimal é uma maneira comum de representar cores no CSS. Consiste em seis caracteres,
+        onde os dois primeiros representam a intensidade da cor vermelha,
+        os dois seguintes a intensidade da cor verde,
+        e os dois últimos a intensidade da cor azul. 
+*/
+
+p {
+    color: #ff0000;
+    /* Vermelho */
+}
+
+/* - 2°. RGB:
+
+        - O formato RGB representa a cor usando os componentes de vermelho (R), verde (G) e azul (B). Cada componente pode variar de 0 a 255.
+*/
+
+p {
+    color: rgb(255, 0, 0); 
+/* Vermelho */
+}
+
+/* - 3°. RGBA: 
+
+        - O formato RGBA é semelhante ao RGB, mas inclui um valor de opacidade (Alfa) que varia de 0 a 1. Isso permite tornar a cor parcialmente transparente.
+*/
+
+p {
+    color: rgba(255, 0, 0, 0.5); 
+/* Vermelho com 50% de opacidade */
+}
+
+/* - 4°. NOME DA COR:
+
+        - Algumas cores tem nomes associados, como red, blue, green, entre outros.
+*/
+
+p {
+    color: red; /* Vermelho */
+}
+
+/* Exemplo de aplicação: */
+h1 {
+    color: #2413dc;
+  }
+
+h2 {
+    color: red;
+  }

@@ -1,0 +1,166 @@
+/* - Unidades de medida:
+
+    - As unidades de medida no CSS são para especificar tamanhos e distâncias em propriedades como largura, altura, margens, espaçamentos, entre outras. Existem diferentes tipos de unidades de medida no CSS, e elas podem ser classificadas em unidades absolutas e unidades relativas. 
+*/
+
+/* - UNIDADES DE MEDIDAS ABSOLUTAS: */
+
+/* 
+    - PIXEL (px):
+
+        - Descrição: Uma unidade avsoluta que representa um pixel no dispositivo.
+
+    - Exemplo: 
+*/
+
+p {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* 
+    - POLEGADAS (in):
+    
+        - Descrição: Uma unidade absoluta que representa uma polegada física.
+
+    - Exemplo:
+*/
+
+div {
+    width: 2in;
+}
+
+/* 
+    - CENTÍMETROS (cm):
+
+        - Descrição: Uma unidade absoluta que represnta um centímetro.
+
+    - Exemplo: 
+*/
+
+img {
+    height: 5cm;
+}
+
+/* 
+    - PONTOS (pt):
+    
+        - Descrição: Uma unidade absoluta comum em impressão, onde 1 pont é aproximadamente 1,72 de polegada.
+
+    - Exemplo:
+*/
+
+h1 {
+    font-size: 18pt;
+}
+
+/* 
+    - PICAS (pc):
+
+        - Descrição: Uma unidade absoluta usada principalmente em impressão, onde 1 pica é igual a 12 pontos.
+
+    - Exemplo: 
+*/
+
+p {
+    line-height: 1.5pc;
+}
+
+/* UNIDADES DE MEDIDA RELATIVAS: */
+
+/* 
+    - EM (em):
+
+        - Descrição: Representa o tamanho da fonte do elemento pai.
+
+    - Exemplo: 
+*/
+
+p {
+    margin-left: 2em;
+}
+
+/* 
+    - REM (rem):
+
+        - Descrição: Representa o tamanho da fonte do elemento raiz (normalmente, o tamanho da fonte do elemento <html>)
+
+    - Exemplo: 
+*/
+
+body {
+    font-size: 16px;
+}
+
+p {
+    margin-left: 1.5rem;
+    /* Será 1.5 vezes o tamanho da fonte do elemento raiz (16px) */
+}
+
+/* 
+    - PORCENTAGEM (%):
+
+        - Descrição: Representa uma porcentagem do valor da propriedade do elemento pai.
+
+    - Exemplo: 
+*/
+
+div {
+    width: 50%;
+}
+
+/* 
+    - VIEWPORT WIDTH:
+
+        - Descrição: Representa uma porcentagem da largura da viewport.
+
+    - Exemplo: 
+*/
+
+section {
+    width: 50vw;
+}
+
+/* 
+    - VIEWPORT HIGHT (vh):
+
+        - Descrição: Representa uma porcentagem da altura da viewport.
+
+    - Exemplo: 
+*/
+
+aside {
+    height: 80vh;
+}
+
+/* 
+    - VIEWPORT MINIMUM (vmin) e VIEWPORT MAXIMUM (vmax):
+
+        - Descriçao: vmin é a menor das unidades vw e vh, enqunto vmax é a maior.
+
+    - Exemplo: 
+*/
+
+img {
+    width: 50vmin;
+}
+
+/* 
+    - CONSIDERAÇÕES FINAIS:
+
+    - Escolha da Unidade:
+
+        - Escolha a unidade de medida com base nos requisitos de design e no comportamento desejado.
+
+        - Unidades relativas são frequentemente preferidas para criar layouts responsivos.
+
+    - Combinação de Unidades:
+        - É possível combinar unidades em propriedades diferentes para obter resultados mais complexos. 
+    */
+
+div {
+    margin: 1em 2rem;
+    /* Margem superior/inferior de 1em e margem esquerda/direita de 2rem */
+}
+
+/* - Lembre-se de que a escolha da unidade depende do contexto e das necessidades específicas do seu projeto. As unidades relativas são frequentemente preferidas em ambientes responsivos, pois ajudam a manter proporções consistentes em relação ao tamanho da fonte ou à largura/altura da janela de exibição. */
