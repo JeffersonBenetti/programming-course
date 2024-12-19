@@ -1,0 +1,53 @@
+/* 
+
+
+    - Introdução:
+
+    - CSS significa → Cascading Style Sheet** (Folha de Estilo em Cascata)
+
+    - O CSS desempenha um papel importante na construção de Páginas Web. Com ele é possível controlar e estilizar a apresentação dos conteúdos.
+
+    - ASPECTOS ESSENCIAIS:
+
+        - 1. Estilo e Aparência:
+            - Definição de Estilos:
+                - O CSS permite que os desenvolvedores definam estilos visuais para elementos HTML, como cores, fontes, tamanhos de texto, espaçamento, entre outros.
+    
+            - Consistência Visual: 
+                - Garante uma consistência visual em todo o site, facilitando a manutenção e proporcionando uma experiência de usuário coesa.
+    
+        - 2. Layout e Posicionamento:
+            - Box Model:
+                - Controla o layout básico dos elementos, dividindo-os em conteúdo, padding, border e margin.
+            - Posicionamento:
+                - Facilita o posicionamento de elementos na página, permitindo que sejam organizados de maneira precisa.
+    
+        - 3. Responsividade:
+            - Media Queries:
+                - Permite criar layouts responsivos que se ajustam a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência consistente em desktops, tablets e smartphones.
+    
+        - 4. Animações e Transições:
+            - Adição de Movimento:
+                - Permite adicionar animações e transições para criar efeitos visuais dinâmicos e atrativos.
+    
+        - 5. Facilidade de Manutenção:
+            - Separação de Concerns:
+                - Promove a separação entre estrutura (HTML) e apresentação (CSS), facilitando a manutenção e a atualização do código.
+    
+        - 6. Compatibilidade com Navegadores:
+            - Normalização:
+                - Ajuda a normalizar o comportamento em diferentes navegadores, garantindo que a aparência do site seja consistente independentemente do navegador utilizado.
+    
+        - 7. Acessibilidade:
+            - Melhorias de Acessibilidade:
+                - Oferece recursos para melhorar a acessibilidade, como ajustes de contraste, fontes legíveis e layouts adaptativos.
+    
+        - 8. Desenvolvimento Eficiente:
+            - Reutilização de Estilos:
+                - Permite a reutilização eficiente de estilos em várias páginas ou componentes, economizando tempo de desenvolvimento.
+    
+        - 9. Personalização Dinâmica:
+            - Pseudo-classes e Pseudo-elementos:
+                - Possibilita a personalização dinâmica de elementos com base em diferentes estados ou posições.
+
+    - Resumindo, o CSS é responsável por dar vida e beleza à estrutura HTML, onde os desenvolvedores conseguem controlar a apresentação visual dos sites buscando sempre a melhor experiência possível do usuário. */
