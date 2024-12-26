@@ -1,0 +1,31 @@
+/* 
+    - DISPLAY: 
+
+    - A propriedade CSS display controla como um elemento HTML é exibido na página. Ela determina se o elemento se comportará como um bloco, um elemento em linha ou de alguma outra maneira específica. Aqui estão alguns dos valores mais comuns para a propriedade display:
+
+    - DISPLAY: BLOCK:
+
+        - Elementos com display: block são exibidos como blocos retangulares e normalmente começam em uma nova linha. Eles ocupam toda a largura disponível e podem ter margens, preenchimento e bordas.
+
+    - DISPLAY: INLINE:
+
+        - Elementos com display: inline são exibidos em linha com o texto ou outros elementos em linha. Eles não iniciam uma nova linha e geralmente não podem ter margens, preenchimento e bordas.
+
+    - DISPLAY: INLINE-BLOCK: 
+
+        - Elementos com display: inline-block são semelhantes a elementos em linha, mas podem ter margens, preenchimento e bordas, como elementos de bloco. Eles são exibidos em linha e ocupam apenas o espaço necessário.
+
+    - DISPLAY: NONE: 
+
+        - Elementos com display: none são totalmente ocultos e não ocupam espaço na página. Eles não são renderizados.
+
+    - DISPLAY: FLEX: 
+
+        - A propriedade display: flex cria um contêiner flexível e permite que os elementos dentro dele se ajustem dinamicamente para preencher o espaço disponível. É usado para criar layouts flexíveis e responsivos.
+
+    - DISPLAY: GRID: 
+
+        - A propriedade display: grid cria um contêiner de layout em grade, onde você pode definir linhas e colunas para organizar elementos em um layout de grade. É útil para criar layouts complexos e alinhados.
+
+    - Essas são apenas algumas das opções de valores para a propriedade display. A escolha do valor de display afeta o comportamento e a apresentação do elemento na página, e é uma parte fundamental do design de layout em CSS.
+ */

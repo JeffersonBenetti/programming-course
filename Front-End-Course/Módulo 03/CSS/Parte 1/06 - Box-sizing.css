@@ -1,0 +1,19 @@
+/* 
+    - BOX-SIZING:
+
+    - A propriedade CSS box-sizing determina como o tamanho total de um elemento (largura e altura) é calculado, considerando ou não as bordas e o preenchimento do elemento. Existem dois tipos de box-sizing.
+
+    - BOX-SIZING: CONTENT-BOX (valor padrão):
+
+        - Nesse modo, o tamanho do elemento é calculado levando em consideração apenas o conteúdo interno, excluindo as bordas e o preenchimento.
+
+        - Isso significa que se você definir a largura ou altura de um elemento, as bordas e o preenchimento serão adicionados a esse tamanho. O conteúdo real ocupará o espaço restante dentro do elemento.
+
+    - BOX-SIZING: BORDER-BOX:
+
+        - Nesse modo, o tamanho total do elemento inclui as bordas e o preenchimento. O conteúdo real do elemento é dimensionado para caber dentro desse tamanho, e as bordas e o preenchimento não afetam o tamanho total.
+
+        - O uso mais comum do box-sizing: border-box é em layouts responsivos, onde você deseja que os elementos mantenham um tamanho fixo, incluindo bordas e preenchimento, para garantir que não sejam distorcidos quando as dimensões do elemento são alteradas.
+
+        - Por exemplo, se você tiver um elemento com box-sizing: border-box e definir a largura como 100 pixels, a largura total do elemento será 100 pixels, incluindo as bordas e o preenchimento. Se você usar box-sizing: content-box, a largura total será 100 pixels + largura da borda + preenchimento. O uso adequado do box-sizing pode facilitar o desenvolvimento de layouts consistentes e previsíveis em CSS. 
+*/

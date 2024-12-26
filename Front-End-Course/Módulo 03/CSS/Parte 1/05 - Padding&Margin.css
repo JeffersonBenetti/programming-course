@@ -1,0 +1,69 @@
+/* 
+    - MARGIN:
+
+    - Define o espaçamento externo ao redor de um elemento. Pode ser aplicado individualmente para cada lado (margin-top, margin-right, margin-bottom, margin-left) ou de uma só vez usando a propriedade margin. 
+*/
+.box {
+    margin: 10px;
+    /* Aplica 10 pixels de margem em todos os lados */
+}
+
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+/* 
+    - PADDING:
+
+    - Define o espaçamento interno ao redor do conteúdo de um elemento. Assim como margin, pode ser aplicado individualmente para cada lado (padding-top, padding-right, padding-bottom, padding-left)ou de uma só vez padding. 
+*/
+
+.box {
+    padding: 20px;
+    /* Aplica 20 pixels de preenchimento em todos os lados */
+}
+
+p {
+    border: 2px solid red;
+    /* Se a propriedade padding tiver quatro valores: */
+    padding: 10px 5px 150px 50px;
+}
+
+/* preenchimento superior (padding-top) é 10px */
+/* preenchimento direito (padding-right) é 5px */
+/* preenchimento inferior (padding-bottom) é de 150px8 */
+/* preenchimento esquerdo (padding-left) é 50px */
+
+/* 
+    - WIDTH e HEIGHT:
+
+    - Estão ligados a largura e altura dos elementos. 
+
+    - width: 10px;
+        - Controla a largura do elemento
+
+    - min-width: 25rem;
+        - Controla a largura mínima que um elemento pode ter
+
+    - max-width: 1vw;
+        - Controla a largura máxima que um elemento pode ter.
+
+    - height: 3em;
+        - Controla a altura do elemento.
+
+    - min-height: 25%;
+        - Controla a altura mínima que um elemento pode ter.
+
+    - max-height: 20px;
+        - Controla a altura máxima que um elemento pode ter.
+*/
+
+/* EXEMPLO: */
+h1 {
+    background-color: blue;
+    width: 30%;
+    height: 200px;
+}
