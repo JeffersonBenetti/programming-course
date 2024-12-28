@@ -1,0 +1,165 @@
+/* 
+    - PSEUDO-CLASSES:
+    
+    - Uma pseudoclasse CSS é uma palavra-chave adicionada a um seletor que permite estilizar um estado específico do(s) elemento(s) selecionado(s). Por exemplo, a pseudoclasse pode ser usada para selecionar um botão quando o ponteiro do usuário passa sobre o botão e esse botão selecionado pode então ser estilizado.:hover
+*/
+button:hover {
+    color: blue;
+    /* Qualquer botão sobre o qual o ponteiro do usuário esteja pairando */
+}
+
+/* 
+    - Uma pseudoclasse consiste em dois pontos ( :) seguidos pelo nome da pseudoclasse (por exemplo, :hover). Uma pseudoclasse funcional também contém um par de parênteses para definir os argumentos (por exemplo, :dir()). O elemento ao qual uma pseudoclasse é anexada é definido como um elemento âncora (por exemplo, button no caso button:hover). 
+
+    - As pseudoclasses permitem que você aplique um estilo a um elemento não apenas em relação ao conteúdo da árvore do documento, mas também em relação a fatores externos, como o histórico do navegador ( :visited, por exemplo), o status do seu conteúdo (como :checkedem certos elementos de formulário) ou a posição do mouse (como :hover, que permite que você saiba se o mouse está sobre um elemento ou não).
+
+    - PSEUDOCLASSES DE ESTADO DE EXIBIÇÃO DE ELEMENTOS:
+
+        - Essas pseudo-classes permitem a seleção de elementos com base em seus estados de exibição.
+
+            - :FULLSCREEN -> Corresponde a um elemento que está atualmente no modo de tela cheia.
+
+            - :MODAL -> Corresponde a um elemento que está em um estado no qual exclui toda interação com elementos externos até que a interação seja descartada.
+
+            - :PICTURE-IN-PICTURE -> Corresponde a um elemento que está atualmente no modo picture-in-picture.
+
+    - PSEUDO-CLASSES DE ENTRADA:
+
+        - Essas pseudoclasses se relacionam com elementos de formulário e permitem selecionar elementos com base em atributos HTML e no estado em que o campo se encontra antes e depois da interação.
+
+            - :AUTOFILL -> Corresponde quando um <input> foi preenchido automaticamente pelo navegador.
+
+            - :ENABLED -> Representa um elemento da interface do usuário que está em um estado habilitado.
+
+            - :DISABLED -> Representa um elemento da interface do usuário que está em estado desabilitado.
+
+            - :READ-ONLY -> Representa qualquer elemento que não pode ser alterado pelo usuário.
+
+            - :READ-WRITE -> Representa qualquer elemento editável pelo usuário.
+
+            - :PLACEHOLDER-SHOWN -> Corresponde a um elemento de entrada que está exibindo texto de espaço reservado. Por exemplo, ele corresponderá ao placeholder atributo nos elementos <input> and <textarea>.
+
+            - :DEFAULT -> Corresponde a um ou mais elementos da interface do usuário que são o padrão entre um conjunto de elementos.
+
+            - :CHECKED -> Corresponde quando elementos como caixas de seleção e botões de opção são ativados.
+
+            - :INDETERMINATE -> Corresponde a elementos da interface do usuário quando eles estão em um estado indeterminado.
+
+            - :BLANK -> Corresponde a um elemento de entrada do usuário que está vazio, contendo uma string vazia ou outra entrada nula.
+
+            - :VALID -> Corresponde a um elemento com conteúdo válido. Por exemplo, um elemento de entrada com o tipo 'email' que contém um endereço de e-mail validamente formado ou um valor vazio se o controle não for necessário.
+
+            - :INVALID -> Corresponde a um elemento com conteúdo inválido. Por exemplo, um elemento de entrada com o tipo 'email' com um nome inserido.
+
+            - :IN-RENGE -> Aplica-se a elementos com limitações de alcance. Por exemplo, um controle deslizante quando o valor selecionado está no intervalo permitido.
+
+            - :OUT-OF-RANGE -> Aplica-se a elementos com limitações de alcance. Por exemplo, um controle deslizante quando o valor selecionado está fora do alcance permitido.
+
+            - :REQUIRED -> Corresponde quando um elemento de formulário é necessário.
+
+            - :OPTIONAL -> Corresponde quando um elemento de formulário é opcional.
+
+            - :USER-VALID -> Representa um elemento com entrada correta, mas somente quando o usuário interagiu com ele.
+
+            - :USER-INVALID -> Representa um elemento com entrada incorreta, mas somente quando o usuário interagiu com ele.
+
+    - PSEUDO-CLASSES LINGUÍSTICAS:
+        
+        - Essas pseudoclasses refletem o idioma do documento e permitem a seleção de elementos com base no idioma ou na direção do script.
+
+            - :DIR() -> A pseudoclasse de direcionalidade seleciona um elemento com base em sua direcionalidade, conforme determinado pelo idioma do documento.
+
+            - :LANG() -> Selecione um elemento com base no idioma do seu conteúdo.
+
+    - PSEUDO-CLASSES DE LOCALIZAÇÃO:
+            
+        - Essas pseudoclasses se relacionam a links e a elementos direcionados dentro do documento atual.
+
+            - :ANY-LINK -> Corresponde a um elemento se o elemento corresponder a :linkou :visited.
+
+            - :LINK -> Corresponde a links que ainda não foram visitados.
+
+            - :VISITED -> Corresponde aos links que foram visitados.
+
+            - :LOCAL-LINK -> Corresponde a links cuja URL absoluta é a mesma que a URL de destino. Por exemplo, links âncora para a mesma página.
+
+            - :TARGET -> Corresponde ao elemento que é o destino do URL do documento.
+
+            - :TARGET-WITHIN -> Corresponde a elementos que são o destino da URL do documento, mas também a elementos que têm um descendente que é o destino da URL do documento.
+
+            - :SCOPE -> Representa elementos que são um ponto de referência para correspondência dos seletores.
+
+    - PSEUDO-CLASSES DE ESTADOS DE RECURSO:
+
+        - Essas pseudoclasses se aplicam a mídias que são capazes de estar em um estado em que seriam descritas como sendo reproduzidas, como um vídeo.
+
+            - :PLAYING -> Representa um elemento de mídia que é capaz de ser reproduzido quando esse elemento estiver em reprodução.
+
+            - :PAUSED -> Representa um elemento de mídia que é capaz de ser reproduzido quando esse elemento é pausado.
+
+    - PSEUDO-CLASSES DIMENSIONAIS NO TEMPO:
+
+        - Essas pseudoclasses se aplicam ao visualizar algo que tem tempo, como uma trilha de legenda WebVTT .
+
+            - :CURRENT -> Representa o elemento ou ancestral do elemento que está sendo exibido.
+
+            - :PAST -> Representa um elemento que ocorre inteiramente antes do :currentelemento.
+
+            - :FUTURE -> Representa um elemento que ocorre inteiramente depois do :currentelemento.
+
+    - PSEUDO-CLASSES ESTRUTURAIS DE ÁRVORE:
+
+        - Essas pseudoclasses estão relacionadas à localização de um elemento na árvore do documento.
+
+            - :ROOT -> Representa um elemento que é a raiz do documento. Em HTML, geralmente é o <html> elemento.
+
+            - :EMPTY -> Representa um elemento sem filhos além de caracteres de espaço em branco.
+
+            - :NTH-CHILD -> Usa An+B notação para selecionar elementos de uma lista de elementos irmãos.
+
+            - :NTH-LAST-CHILD -> Usa An+B notação para selecionar elementos de uma lista de elementos irmãos, contando de trás para frente a partir do final da lista.
+
+            - :FIRST-CHILD -> Corresponde a um elemento que é o primeiro de seus irmãos.
+
+            - :LAST-CHILD -> Corresponde a um elemento que é o último de seus irmãos.
+
+            - :ONLY-CHILD -> Corresponde a um elemento que não tem irmãos. Por exemplo, um item de lista sem outros itens de lista nessa lista.
+
+            - :NTH-OF-TYPE -> Usa An+B notação para selecionar elementos de uma lista de elementos irmãos que correspondem a um determinado tipo de uma lista de elementos irmãos.
+
+            - :NTH-LAST-OF-TYPE -> Usa An+B notação para selecionar elementos de uma lista de elementos irmãos que correspondem a um determinado tipo de uma lista de elementos irmãos contando de trás para frente a partir do final da lista.
+
+            - :FIRST-OF-TYPE -> Corresponde a um elemento que é o primeiro de seus irmãos e também corresponde a um determinado seletor de tipo.
+
+            - :LAST-OF-TYPE -> Corresponde a um elemento que é o último de seus irmãos e também corresponde a um determinado seletor de tipo.
+
+            - :ONLY-OF-TYPE -> Corresponde a um elemento que não possui irmãos do seletor de tipo escolhido.
+
+    - PSEUDO-CLASSES DE AÇÃO DO USUÁRIO:
+
+        - Essas pseudoclasses exigem alguma interação do usuário para serem aplicadas, como manter o ponteiro do mouse sobre um elemento.
+
+            - :HOVER -> Corresponde quando um usuário designa um item com um dispositivo apontador, como segurar o ponteiro do mouse sobre o item.
+
+            - :ACTIVE -> Corresponde quando um item está sendo ativado pelo usuário. Por exemplo, quando o item é clicado.
+
+            - :FOCUS -> Corresponde quando um elemento tem foco.
+
+            - :FOCUS-VICIBLE -> Corresponde quando um elemento tem foco e o agente do usuário identifica que o elemento deve estar visivelmente em foco.
+
+            - :FOCUS-WITHIN -> Corresponde a um elemento ao qual :focus se aplica, mais qualquer elemento que tenha um descendente ao qual :focus se aplica.
+
+    - PSEUDO-CLASSES FUNCIONAIS:
+
+        - Essas pseudoclasses aceitam uma lista de seletores ou uma lista de seletores tolerantes como parâmetro.
+
+            - :IS() -> A pseudoclasse matches-any corresponde a qualquer elemento que corresponda a qualquer um dos seletores na lista fornecida. A lista é indulgente.
+
+            - :NOT() -> A pseudoclasse de negação, ou não corresponde a nenhuma, representa qualquer elemento que não seja representado por seu argumento.
+
+            - :WHERE() -> A pseudoclasse specificity-adjustment corresponde a qualquer elemento que corresponda a qualquer um dos seletores na lista fornecida sem adicionar nenhum peso de especificidade. A lista é indulgente.
+
+            - :HAS() -> A pseudoclasse relacional representa um elemento se qualquer um dos seletores relativos corresponder quando ancorado ao elemento anexado.
+
+    - Assim como as classes regulares, você pode encadear quantas pseudoclasses quiser em um seletor.
+*/

@@ -1,0 +1,35 @@
+/* 
+    - PSEUDO-ELEMENTOS: 
+
+    - Um pseudo-elemento CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudo-elemento '::first-line' aplica o estilo apenas na primeira linha de um parágrafo.
+*/
+/* A primeira linha de todo elemento <p>. */
+p::first-line {
+    color: blue;
+    text-transform: uppercase;
+}
+
+/* 
+    seletor::pseudo-elemento {
+        propriedade: valor;
+    } 
+
+    - Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer depois da declaração de um elemento simples.
+
+    - Nota: Como regra, os dois pontos devem ser usados duas vezes (::) ao invés de uma única vez (:). Isso distingue pseudo-classes de pseudo-elementos. Apesar disso, devido a essa distinção não estar presente em versões mais antigas da especificação da W3C, a maioria dos navegadores suportam ambas as sintaxes para os pseudo-elementos originais.
+
+    - Índice de pseudo-elementos comuns:
+
+        - ::after
+        - ::before
+        - ::cue
+        - ::first-letter
+        - ::first-line
+        - ::selection
+        - ::slotted
+        - ::backdrop
+        - ::placeholder 
+        - ::marker 
+        - ::spelling-error 
+        - ::grammar-error 
+*/

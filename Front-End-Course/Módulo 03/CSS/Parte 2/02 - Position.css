@@ -1,0 +1,28 @@
+/* 
+    - POSITION:
+
+    - A propriedade CSS position é usada para controlar como um elemento HTML é posicionado em relação a outros elementos na página. Ela define o método de posicionamento do elemento. Aqui está uma explicação simples da propriedade position:
+
+    - POSITION: STATIC (valor padrão):
+
+        - Este é o comportamento padrão. O elemento é posicionado de acordo com o fluxo normal do documento.    Qualquer configuração de deslocamento (top, right, bottom, left) é ignorada.
+
+    - POSITION: RELATIVE:
+
+        - O elemento é posicionado em relação à sua posição original no fluxo do documento. Você pode usar as propriedades `top`, `right`, `bottom` e `left` para ajustar a posição a partir do local original.
+
+    - POSITION: ABSOLUTE:
+
+        - O elemento é posicionado em relação ao elemento pai mais próximo com uma posição que não seja `static`. Se nenhum elemento pai atender a esse critério, o posicionamento é feito em relação ao elemento raiz do documento (normalmente o `<html>`).
+            - As propriedades `top`, `right`, `bottom` e `left` são usadas para definir a posição em relação ao elemento de referência.
+
+    - POSITION: FIXED:
+
+        - O elemento é posicionado em relação à janela do navegador e permanece fixo na tela, mesmo quando a página é rolada. Geralmente usado para elementos como barras de navegação fixas.
+
+    - POSITION: STICKY:
+
+        - O elemento é posicionado em relação ao seu elemento pai mais próximo com um limite de deslocamento (geralmente o valor de `top`). Ele se comporta como `position: relative` até que o usuário role a página até o limite de deslocamento, momento em que se torna `position: fixed`.
+
+    - O uso apropriado da propriedade `position` é essencial para criar layouts e designs de página complexas. Ela permite que você controle o posicionamento de elementos com precisão, tornando-os parte fundamental do design e da estrutura da sua página. 
+*/

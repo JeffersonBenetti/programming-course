@@ -1,0 +1,20 @@
+/* 
+    - !IMPORTANT:
+
+    - A propriedade CSS '!important' é usada para dar uma regra de estilo de prioridade máxima, garantindo que ela seja aplicada, mesmo que haja outras regras CSS concorrentes. Ela é usada em uma declaração de estilo para sinalizar que aquele estilo deve prevalecer sobre outros estilos que possam ser aplicados ao mesmo elemento. Aqui está uma explicação simples do '!important':
+
+    - Quando você adiciona '!important' a uma regra de estilo, isso significa que essa regra será a mais importante e terá precedência sobre todas as outras regras, mesmo que essas outras regras tenham sido definidas posteriormente no código CSS. 
+*/
+
+/* EXEMPLO: */
+p {
+    color: blue !important;
+    /* Esta regra tem a máxima prioridade. */
+}
+
+p {
+    color: red;
+    /* Esta regra será ignorada para elementos <p>. */
+}
+
+/* Neste exemplo, o texto dentro dos elementos <p> será azul, independentemente de qualquer outra regra de estilo que tente defini-lo como vermelho. O uso de '!important' deve ser feito com moderação, pois pode tornar o código mais difícil de gerenciar e depurar, uma vez que pode anular outras regras que você possa não desejar sobrescrever. Portanto, é recomendável usá-lo apenas quando necessário, em situações específicas em que você precisa garantir que um estilo seja aplicado independentemente de qualquer outra regra. */
