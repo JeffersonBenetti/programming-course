@@ -1,0 +1,54 @@
+/*
+    - RESPONSIVIDADE
+
+    - A 'responsividade' em CSS refere-se à capacidade de um site ou aplicativo se adaptar a diferentes tamanhos de tela e dispositivos, proporcionando uma boa experiência de usuário em smartphones, tablets, laptops e desktops. Fazer um 'design responsivo' envolve a reorganização e o ajuste dos elementos da página para que eles sejam visualmente agradáveis e funcionais em diversas resoluções de tela.
+
+    - Como criar um 'design responsivo':
+
+        - 1. 'Layout de Grade Flexível ou Grid': Use layouts flexíveis, como Flexbox ou Grid Layout, para criar estruturas que se ajustem automaticamente ao tamanho da tela. Esses sistemas permitem que você defina como os elementos se comportam em relação uns aos outros, tornando o design flexível.
+
+        - 2. 'Unidades Relativas': Use unidades de medida relativas, como porcentagem (%) ou as unidades "em", "rem" e "vw" (viewport width), em vez de medidas fixas em pixels. Isso permite que os elementos se ajustem ao tamanho da tela do usuário.
+
+        - 3. 'Media Queries': As media queries são regras CSS que permitem aplicar estilos específicos com base nas características da tela do dispositivo, como largura da tela. Você pode usar media queries para ajustar o layout e o tamanho dos elementos para diferentes tamanhos de tela.
+
+    - Exemplo: 
+*/
+@media (max-width: 768px) {
+    /* Estilos para telas menores que 768px de largura */
+}
+
+/* 
+    - Imagens Responsivas: Use imagens responsivas, definindo o atributo **`width: 100%`** em imagens dentro de layouts flexíveis para que elas redimensionem proporcionalmente ao tamanho da tela.
+
+    - Tamanhos de Fonte Flexíveis: Use unidades relativas, como "em" ou "rem", para definir tamanhos de fonte, permitindo que o texto se ajuste ao tamanho da tela.
+    
+    - Teste em Diferentes Dispositivos: Certifique-se de testar seu design responsivo em vários dispositivos e tamanhos de tela para garantir que ele funcione corretamente em todas as situações.
+
+    - Prioridade de Conteúdo: Considere a hierarquia de conteúdo e priorize os elementos mais importantes para exibição em dispositivos menores. Às vezes, você pode ocultar ou reorganizar conteúdo menos crítico em telas menores.
+
+    - Lembre-se de que a responsividade é uma parte essencial do design web moderno, uma vez que a maioria dos usuários acessa sites por meio de dispositivos variados. Ao criar um 'design responsivo', você melhora a usabilidade e a acessibilidade do seu site, tornando-o mais amigável para todos os visitantes. 
+
+    - Tela que podemos aplicar:
+
+        - All: Para todos os dispositivos.
+
+        - Braille: Para dispositivos táteis.
+
+        - Enbossed: Para dispositivos que imprimem em braille.
+
+        - Handheld: Para dispositivos portáteis, geralmente com telas pequenas e banda limitada.
+
+        - Print: Para impressão em papel.
+
+        - Projection: Para apresentações como PPS.
+
+        - Screen: Para monitores ou dispositivos com telas coloritas e resolução adequada.
+
+        - Speach: Para sintatizadores de voz. As CSS 2 tem uma especificação de Css chamada 'Aural', onde podemos formatar a voz dos sintetizadores.
+
+        - Orientação:
+
+            - Portrait(celular em pé): Altura maior que a largura. 
+
+            - Landscaze(celular deitado): Largura maior que altura.
+*/
