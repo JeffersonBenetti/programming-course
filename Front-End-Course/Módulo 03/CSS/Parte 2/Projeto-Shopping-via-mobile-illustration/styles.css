@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    font-family: "Oswald", serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.section-right {
+    width: 60%;
+    height: 100vh;
+    display: inline-block;
+}
+
+.content {
+    margin: 150px 0 123px 136px;
+}
+
+h1 {
+    width: 368px;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    text-align: left;
+    color: #5D5D7D;
+}
+
+p {
+    width: 540px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+    color: rgba(93, 93, 125, 0.60);
+    margin: 15px 0;
+}
+
+.content-button {
+    width: 220px;
+    height: 50px;
+    background: #9499EA;
+    box-shadow: 0px 10px 24px 0px #9499EA19;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.section-left {
+    width: 40%;
+    height: 100vh;
+    background: rgba(93, 93, 125, 0.16);
+    display: inline-block;
+    position: absolute;
+}
+
+header {
+    width: 375px;
+    margin: 24px auto 0;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    font-size: 28px;
+    margin-right: 41px;
+    color: #5D5D7D;
+}
+
+li:nth-child(2) {
+    color: rgba(93, 93, 125, 0.40);
+}
+
+.logo {
+    width: 300px;
+    position: absolute;
+    top: 170px;
+    left: -85px;
+}
+
+.logo img {
+    width: 100%;
+}
