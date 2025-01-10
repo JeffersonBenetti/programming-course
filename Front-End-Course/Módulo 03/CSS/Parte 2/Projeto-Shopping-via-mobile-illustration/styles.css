@@ -8,18 +8,15 @@
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .section-right {
     width: 60%;
     height: 100vh;
     display: inline-block;
-}
-
-.content {
-    margin: 150px 0 123px 136px;
+    padding: 150px 0 123px 80px;
 }
 
 h1 {
@@ -41,7 +38,7 @@ p {
     margin: 15px 0;
 }
 
-.content-button {
+.section-right-button {
     width: 220px;
     height: 50px;
     background: #9499EA;
@@ -50,6 +47,7 @@ p {
     color: #fff;
     font-size: 18px;
     text-align: center;
+    cursor: pointer;
 }
 
 .section-left {
@@ -61,7 +59,7 @@ p {
 }
 
 header {
-    width: 375px;
+    max-width: 450px;
     margin: 24px auto 0;
 }
 
@@ -71,21 +69,18 @@ ul {
 
 ul li {
     font-size: 28px;
-    margin-right: 41px;
     color: #5D5D7D;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 li:nth-child(2) {
     color: rgba(93, 93, 125, 0.40);
 }
 
-.logo {
+.logo-image {
     width: 300px;
     position: absolute;
     top: 170px;
     left: -85px;
-}
-
-.logo img {
-    width: 100%;
 }
