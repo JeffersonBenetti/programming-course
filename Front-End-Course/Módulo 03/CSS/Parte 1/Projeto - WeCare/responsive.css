@@ -1,0 +1,45 @@
+@media screen and (max-width: 1230px) {
+    body {
+        padding: 75px 0 20px;
+        background: white;
+    }
+
+    header {
+        display: none;
+    }
+
+    .logo-image {
+        display: block;
+        width: 254px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        display: block;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin: 7px 0 17px;
+        text-align: center;
+    }
+
+    p {
+        display: none;
+    }
+
+    .button-main {
+        width: 239px;
+        height: 64px;
+        display: block;
+        margin: 0 auto;
+    }
+}
