@@ -1,0 +1,53 @@
+/* 
+    - A propriedade font é uma propriedade composta que permite ao desenvolvedor definir várias propriedades em uma únida declaração.
+
+    - Dentre as mais usadas variações das propriedades relacionadas a fonte temos:
+        - font-style: Define o estilo da fonte, como normal, itálico ou oblíquo. */
+
+p {
+    font-style: italic;
+}
+
+/* - font-variant: Define a variante da fonte, como normal ou small-caps. */
+p {
+    font-variant: small-caps;
+}
+
+/* - font-weight: Define a espessura da fonte, como normal, bold ou um valor numérico. */
+p {
+    font-weight: bold;
+}
+
+/* - font-size: Define o tamanho da fonte. Pode ser especificado em unidades como pixels, em, rem, porcentagem, etc. */
+p {
+    font-size: 16px;
+}
+
+/* ​- font-family: Define a família de fontes,
+indicando uma ou mais fontes preferidas. cssCopy code  */
+p {
+    font-family: "Helvetica", sans-serif;
+}
+
+/* ​ - Você pode combinar essas propriedades conforme necessário para ajustar a aparência da fonte no seu documento HTML. Por exemplo: cssCopy code  */
+p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+}
+
+/* ​ - Agora,
+se preferir agrupar essas propriedades usando a propriedade font,
+isso seria feito assim: cssCopy code  */
+p {
+    font: italic bold 18px "Times New Roman", serif;
+}
+
+/* - Ambas as abordagens são válidas,
+e a escolha dependerá da complexidade do seu estilo de fonte e de suas preferências pessoais. Exemplo:  */
+h1 {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic
+}

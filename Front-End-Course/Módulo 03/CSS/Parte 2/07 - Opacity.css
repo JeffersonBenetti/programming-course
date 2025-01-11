@@ -1,0 +1,81 @@
+/* 
+    - Opacidade e transparência
+
+    - Opacidade e transparência são conceitos relacionados que permitem ajustar a visibilidade dos elementos em uma página web.
+
+    - `opacity`
+    
+    - 1. Opacidade (`opacity`):
+    
+        - A propriedade 'opacity` permite ajustar a opacidade de um elemento, variando de 0 (totalmente transparente) a 1 (totalmente opaco).
+    
+    - Exemplo: css 
+*/
+div {
+    opacity: 0.7;
+    /* Define a opacidade para 70% */
+}
+
+/* Neste exemplo, o elemento `<div>` terá uma opacidade de 70%, tornando-o parcialmente transparente. */
+
+/* - 2. Transparência de Cores:
+    
+    - Outra maneira de alcançar a transparência é utilizando cores RGBA (Red, Green, Blue, Alpha), onde o componente alfa (`A`) controla a opacidade da cor. O valor alfa varia de 0 (totalmente transparente) a 1 (totalmente opaco).
+    
+    - Exemplo:
+*/
+p {
+    background-color: rgba(255, 0, 0, 0.5);
+    /* Fundo vermelho com 50% de opacidade */
+}
+
+/* Neste exemplo, o fundo do elemento `<p>` será vermelho com 50% de opacidade. */
+
+/* - 3. Transições de Opacidade:
+    
+    - É possível criar efeitos de transição suaves na opacidade usando a propriedade `transition`. 
+    
+    - Exemplo:
+*/
+div {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+div:hover {
+    opacity: 0.5;
+    /* Opacidade reduzida ao passar o mouse */
+}
+
+/* - Neste exemplo, a opacidade da `<div>` é reduzida suavemente ao passar o mouse sobre ela, graças à transição configurada. 
+    
+        - 4. Pseudo-elemento `::before` e `::after` com Opacidade:
+        
+        - É possível aplicar opacidade a pseudo-elementos `::before` e `::after` para criar camadas adicionais de elementos com diferentes níveis de transparência. 
+        
+        - Exemplo:
+    */
+
+div::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    opacity: 0.8;
+}
+
+/* - Neste exemplo, um pseudo-elemento `::before` é adicionado a um elemento `<div>`, criando uma camada azul com 80% de opacidade. 
+    
+        - 5. Propriedade `backdrop-filter`: A propriedade `backdrop-filter` permite aplicar efeitos visuais, como desfoque ou escurecimento, na área atrás de um elemento. 
+        
+        - Exemplo:
+    */
+div {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fundo com 50% de opacidade */
+}
+
+/*  - Neste exemplo, a área atrás do elemento `<div>` é desfocada utilizando `backdrop-filter`, enquanto o próprio elemento tem um fundo semitransparente. 
+    */
