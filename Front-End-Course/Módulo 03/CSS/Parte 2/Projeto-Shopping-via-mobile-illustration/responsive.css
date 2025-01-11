@@ -1,0 +1,54 @@
+@media screen and (max-width: 1012px) {
+    p {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-right {
+        display: block;
+        width: 100%;
+        height: 50vh;
+        padding: 15px 0;
+    }
+
+    h1 {
+        width: 200px;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    p {
+        width: 296px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .section-right-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section-left {
+        display: block;
+        width: 100%;
+        height: 50vh;
+        padding: 20px 0;
+    }
+
+    header {
+        display: none;
+    }
+
+    .logo-image {
+        position: static;
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+}
