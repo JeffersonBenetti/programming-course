@@ -1,0 +1,83 @@
+/* 
+    - CALC:
+
+    - A função CSS permite que você execute cálculos ao especificar valores de propriedade CSS. Ela pode ser usada com valores -> 
+        
+        - e .calc() 
+        - <length>
+        - <frequency>
+        - <angle>
+        - <time>
+        - <percentage>
+        - <number>
+        - <integer>
+        - <color-function>
+*/
+
+div {
+    height: calc(100vh - 200px);
+    width: calc((50vh + 200) / 2);
+    background: red;
+}
+
+/* calc(expressão) */
+calc(100% - 80px)
+
+/* Expressão com uma função CSS */
+calc(100px * sin(pi / 2))
+
+/* Expressão contendo uma variável */
+calc(var(--hue) + 180)
+
+/* Expressão com canais de cor em cores relativas */
+lch(from aquamarine l c calc(h + 180))
+
+/* 
+    - A calc()função recebe uma única expressão como parâmetro, e o resultado da expressão é usado como o valor para uma propriedade CSS. Nesta expressão, os operandos podem ser combinados usando os operadores listados abaixo. Quando a expressão contém vários operandos, usa as regras de precedência de operadorescalc() padrão : 
+
+        - '+' -> Adiciona os operandos especificados.
+
+        - '-' -> Subtrai o segundo operando do primeiro operando.
+
+        - '*' -> Multiplica os operandos especificados.
+
+        - '/' -> Divide o operando do lado esquerdo (dividendo) pelo operando do lado direito (divisor).
+
+    - Todos os operandos, exceto aqueles do tipo <number>, devem ser sufixados com uma string de unidade apropriada, como px, em, ou %. Você pode usar uma unidade diferente com cada operando em sua expressão. Você também pode usar parênteses para estabelecer a ordem de computação quando necessário.
+
+    - Descrição:
+
+        - Há alguns pontos a serem lembrados sobre calc():
+
+        - Serializar os argumentos dentro calc()segue o padrão IEEE-754 para matemática de ponto flutuante, o que significa que há alguns casos para se estar ciente em relação às infinityconstantes e NaN. Para mais detalhes sobre como as constantes são serializadas, veja a calc-keywordpágina.
+
+        - Expressões matemáticas envolvendo porcentagens para larguras e alturas em colunas de tabela, grupos de colunas de tabela, linhas de tabela, grupos de linhas de tabela e células de tabela em tabelas de layout automático e fixo podem ser tratadas como se autofosse especificado.
+
+        - A calc()função não pode substituir diretamente o valor numérico por tipos de porcentagem; por exemplo, calc(100 / 4)%é inválido, enquanto calc(100% / 4)é válido.
+
+        - Quando calc()é usado onde an <integer>é esperado, o valor será arredondado para o inteiro mais próximo. Então, calc(1.4)resultará em um valor de 1. Se a parte fracionária do valor for exatamente 0.5, o valor será arredondado para cima. Por exemplo, calc(1.5)resultará em um valor de 2, enquanto calc(-1.5)será arredondado para -1.
+
+        - calc()não pode executar cálculos em valores de tamanho intrínsecos como autoe fit-content. Use a calc-size()função em vez disso.
+
+    - Regras e melhores práticas durante o uso do calc():
+    
+        - Os operadores + and devem ser cercados por espaços em branco. Por exemplo, será analisado como "uma porcentagem seguida por um comprimento negativo" — que é uma expressão inválida — enquanto é "uma porcentagem seguida por um operador de subtração e um comprimento". Da mesma forma, é tratado como "um comprimento seguido por um operador de adição e uma porcentagem negativa".
+            
+            - calc(50% -8px)
+            
+            - calc(50% - 8px)
+            
+            - calc(8px + -50%)
+        
+        - Os operadores * and / não requerem espaços em branco, mas é recomendável adicioná-los para consistência.
+
+        - É permitido aninhar calc()funções, neste caso, as internas são tratadas como simples parênteses.
+
+        - Para comprimentos, você não pode usar 0 to mean 0px(ou outra unidade de comprimento); em vez disso, você deve usar a versão com a unidade: margin-top: calc(0px + 20px);é válida, enquanto margin-top: calc(0 + 20px);é inválida.
+
+        - As implementações atuais exigem que para os operadores * and /, um dos operandos tenha que ser sem unidade. Para /, o operando certo deve ser sem unidade. Por exemplo, font-size: calc(1.25rem / 1.25)é válido, mas font-size: calc(1.25rem / 125%)é inválido.
+
+        - E assim por diante a propriedade CALC tem varias outras funcionalidades, caso queira saber mais e só acessar o site:
+
+        - https://developer.mozilla.org/en-US/docs/Web/CSS/calc#sect.
+*/
