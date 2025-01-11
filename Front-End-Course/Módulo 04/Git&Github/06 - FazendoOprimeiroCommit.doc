@@ -1,0 +1,21 @@
+- Fazendo o primeiro Commit:
+
+- Fazer o primeiro commit em um repositório Git é um passo importante, pois é quando você salva as alterações em seu projeto em um histórico de versionamento. Siga os passos abaixo para fazer o primeiro commit:
+
+    - Abra o Visual Studio Code (VSCode) e navegue até o projeto em que você deseja fazer o commit. Certifique-se de que o projeto está sob controle de versão Git.
+
+    - Abra o painel de controle do Git clicando no ícone "Source Control" na barra lateral esquerda do VSCode. Isso abrirá a exibição de controle de origem.
+
+    - Na exibição de controle de origem, você verá uma lista de arquivos na seção "Changes". Estes são os arquivos que estão na área de stage e estão prontos para serem incluídos no commit.
+    
+    - Digite uma mensagem de commit significativa na caixa de texto na parte superior da exibição de controle de origem. A mensagem de commit deve resumir as alterações que você está fazendo neste commit. Por exemplo:
+
+        -Adicionado arquivo de configuração do projeto
+
+    - Clique no botão de checkmark (✓) na parte superior da exibição de controle de origem para criar o commit. Isso salva as alterações com a mensagem de commit que você forneceu.
+
+    - Após criar o commit, ele será registrado no histórico de versão do seu repositório Git.
+
+- Se for o seu primeiro commit em um repositório, o Git, criará a ramificação principal (normalmente chamada de "main" ou "master") automaticamente e seu commit será registrado nessa ramificação.
+
+- Lembre-se de que os commits são uma parte fundamental do controle de versão Git e ajudam a rastrear as alterações no seu projeto ao longo do tempo. Certifique-se de fornecer mensagens de commit descritivas e significativas para facilitar a compreensão das alterações realizadas em cada commit.
