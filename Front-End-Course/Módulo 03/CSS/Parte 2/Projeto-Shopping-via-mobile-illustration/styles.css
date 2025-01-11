@@ -16,10 +16,7 @@ main {
     width: 60%;
     height: 100vh;
     display: inline-block;
-}
-
-.content {
-    margin: 150px 0 123px 136px;
+    padding: 150px 100px 123px 136px;
 }
 
 h1 {
