@@ -1,0 +1,20 @@
+- Lógica da aplicação:
+
+    - Quando clicar no botão de "converter", pegar o valor do "input" e coventer para o valor da "moeda selecionada" e, "mostrar" o "valores" na "tela" junto com as moedas.
+
+- Passos (Micro tarefas) para desenvolver a lógica(Algoritmo) dessa aplicação.
+
+    - 1° Saber quando o botão é clicado.
+        - Usar um ouvinte de eventos (Click).
+
+    - 2° Pegar o valor do input.
+        - Usar um ouvinte de eventos (keypress).
+
+    - 3° Coverter valores.
+        - Pegar o valor do input e dividir pelo valor da moeda a ser convertida.
+
+    - 4° Mostrar na tela.
+        - Pegar os valores e colocar na tela utilizando (innerHtml, innerText ou text-content)
+
+    - 5° Selecionar moeda a ser convertida. 
+        - usar um ouvinte para saber quando a uma troca de moeda para ser convertida.
