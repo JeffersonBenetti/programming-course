@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+
+    <input id="main-input" placeholder="Digite aqui">
+
+    <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JAVASCRIPT</option>
+        <option>REACT</option>
+        <option>NODE</option>
+    </select>
+
+    <button class="main-button">Clique aqui</button>
+</body>
+<style>
+    h1 {
+        color: #2102b8;
+    }
+
+    button {
+        background: #9de600;
+    }
+</style>
+<script>
+    const input = document.querySelector('#main-input')
+    const select = document.querySelector('select')
+    const button = document.querySelector('.main-button')
+
+    // Todo evento envia um event. Informações do evento.
+    function troqueiValor(event){
+        console.log(event)
+    }
+
+    // Todo evento envia um event. Informações do evento.
+    function inputClicado(event){
+        console.log(event)
+    }
+
+    function ButtonClicado(){
+        console.log('Botão clicado!')
+    }
+
+    // select.addEventListener('change', function() {
+    //     console.log('troquei de valor')
+    // })
+    select.addEventListener('change', troqueiValor())
+    input.addEventListener('keypress', inputClicado())
+    button.addEventListener('click', ButtonClicado())
+
+</script>
+</html>

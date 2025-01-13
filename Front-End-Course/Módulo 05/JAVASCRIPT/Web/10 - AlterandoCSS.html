@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando Elemento</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <input id="main-input" type="text">
+    <p>Começando nossa Jornada para aprender</p>
+    <p class="paragraph-js">A linguagem de <b>Programação</b> mais versátil do mundo</p>
+    <button class="main-button">Clique aqui</button>
+</body>
+<style>
+    h1 {
+        color: #2102b8;
+    }
+
+    button {
+        background: #9de600;
+    }
+
+    p {
+        visibility: hidden;
+    }
+</style>
+<script>
+    const button = document.querySelector('.main-button')
+
+    button.style.fontSize = "14px"
+    button.style.color = "white"
+    button.style.borderRadius = "30px"
+    button.style.padding = "10px 15px"
+</script>
+
+</html>
