@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contator</title>
+</head>
+<body>
+    <h1>0</h1>
+    <button onclick="stop()">Stop</button>
+    <button onclick="start()">Start</button>
+</body>
+<script>
+    const h1 = document.querySelector('h1')
+    let number = 0
+    let cron 
+    
+    function start(){
+      cron = setInterval(() => {
+        number++
+        h1.innerHTML = number
+      }, 100);
+    }
+
+    function stop(){
+        clearInterval(cron)
+    }
+</script>
+</html>
