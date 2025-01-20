@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -12,8 +12,8 @@
     <button onclick="BuscarContato()">Procurar contanto</button>
     <p></p>
 </body>
-<script>
 
+<script>
     let p = document.querySelector('p')
     let input = document.querySelector('input')
 
@@ -25,9 +25,23 @@
     ]
 
     function BuscarContato() {
-       
-    }
+        // Variável criada fora do laço para não ficar no loop infinito.
+        let contact = 0
+        // Essa variável vai servir para controlar o fluxo do laço, por exemplo: Enquanto a variável "contact" for menor(0, 1 e 2) que o array de "contacts"(0, 1, 2, 3) ela será verdadeira, caso ela chegue a posição "3", que é o tamanho do array. A condição se torna falsa, pois a condição é "contact <(menor)contacts.length" não "contact <=(menor ou igual) contacts.length".
 
+        // Verifica a condição para despois executar o código. 
+        while (contact < contacts.length) {
+            if (input.value === contacts[contact].name.toLowerCase()) {
+                p.innerHTML = `Contato encontrado, nome: ${contacts[contact].name}, Telefone: ${contacts[contact].number}`
+
+                break // Serve para parar o código caso encontre o valor "verdadeiro".
+            } else {
+                p.innerHTML = `Contato não encontrado, tente novamente!`
+            }
+
+            contact++ // incremenda + 1. 
+        }
+    }
 </script>
 
-</html> -->
+</html>

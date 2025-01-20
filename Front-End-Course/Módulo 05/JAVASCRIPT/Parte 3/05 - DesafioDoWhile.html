@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -12,8 +12,8 @@
     <button onclick="BuscarContato()">Procurar contanto</button>
     <p></p>
 </body>
-<script>
 
+<script>
     let p = document.querySelector('p')
     let input = document.querySelector('input')
 
@@ -25,9 +25,20 @@
     ]
 
     function BuscarContato() {
+        let contact = 0
 
+        // Executa o código para depois verificar a condição.
+        do {
+            if (input.value === contacts[contact].name.toLowerCase()) {
+                p.innerHTML = `Contato encontrado, nome: ${contacts[contact].name}, Telefone: ${contacts[contact].number}`
+
+                break // Serve para parar o código caso encontre o valor "verdadeiro".
+            } else {
+                p.innerHTML = `Contato não encontrado, tente novamente!`
+            }
+            contact++ // Incremenda + 1.            
+        } while (contact < contacts.length);
     }
-
 </script>
 
-</html> -->
+</html>
