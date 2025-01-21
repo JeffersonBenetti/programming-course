@@ -31,7 +31,7 @@
 
         // Verifica a condição para despois executar o código. 
         while (contact < contacts.length) {
-            if (input.value === contacts[contact].name.toLowerCase()) {
+            if (input.value.toLowerCase() === contacts[contact].name.toLowerCase()) {
                 p.innerHTML = `Contato encontrado, nome: ${contacts[contact].name}, Telefone: ${contacts[contact].number}`
 
                 break // Serve para parar o código caso encontre o valor "verdadeiro".
