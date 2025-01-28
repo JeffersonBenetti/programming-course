@@ -1,0 +1,90 @@
+/*
+    - Propriedades que aplicam no container.
+
+        - Flex-direction: Alinhamento dos itens.
+
+            - Row
+            - Row-revers
+            - Column
+            - Column-revers
+
+        - Flex-wrap: Quebra de linha.
+
+            - Now-Rap
+            - Wrap
+            - Wrap-revers
+
+        - Flex-flow: Combinação de "flex-direction" com "flex-wrap". Em outras palavras.. serve para resumir tudo em uma linha "SÓ".
+
+            - Row nowrap
+            - Row wrap
+            - Column nowrap
+
+            // Sintaxe -> "flex-flow: row-revers wrap".
+            // Primeiro parâmetro é do flex-direction e o segundo do flex-wrap. 
+
+    - No display-flex e no display-grid, nós trabalhamos com "dois eixos".
+
+        - MAIN AXIS -> Eixo princípal.
+        - CROSS AXIS -> Eixo secundário.
+
+    - Quando o display é "row", o eixo "princípal" é o 'horizonal' e o "secundário vertical".
+
+    - Quando está em "column", o eixo princípal é o "vertical" e o "secundário horizontal".
+
+        - Justify-content: Alinha os itens no eixo princípal.
+
+            - Flex-start
+            - Flex-end
+            - Center
+            - Space-between
+            - Space-around
+
+        - Align-items: Alinha os itens no eixo secundário.
+
+            - Stretch - Estica o item para ocupar todo espaço disponivel.
+            - Flex-start
+            - Flex-end
+            - Center
+
+
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 10px;
+    border: 1px solid #9758a6;
+
+    /* Por padrão o display flex é inline. */
+    display: flex;
+
+    /* justify-content */
+    /* height: 800px;
+    width: 800px; */
+
+    /* align-items */
+    height: 700px;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: #cdd728;
+    border: 5px solid #9758a6;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
