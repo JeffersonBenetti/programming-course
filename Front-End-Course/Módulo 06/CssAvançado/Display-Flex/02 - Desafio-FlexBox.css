@@ -1,0 +1,10 @@
+/*
+    - Desafio -> Chegar até o ultimo nivél do jogo.
+
+    - Site do jogo: https://flexboxfroggy.com/
+*/
+
+img {
+    display: block;
+    margin: 20px auto;
+}
