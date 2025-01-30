@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="container">
+        <header class="space">Header</header>
+        <main class="space">Main</main>
+        <aside class="space">Aside</aside>
+        <footer class="space">Footer</footer>
+        <nav class="space">Nav</nav>
+    </div>
+</body>
+<style>
+    /*  - Display-grid:
+    
+        - Colocando a mãe na massa.
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;   
+        padding: 20px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 5fr 1fr;
+
+        grid-gap: 20px;
+    }
+
+    .space {
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    header{
+        background: #333453;
+        grid-column: 1/4;
+    }
+
+    main{
+        background: #259b11;
+        grid-column: 2/3;
+    }
+
+    aside{
+        background: #800534;
+    }
+
+    footer{
+        background: #0c8f9b;
+        grid-row: 3/4;
+        grid-column: 1/4;
+    }
+
+    nav{
+        background: #ff0a0a;
+        grid-row: 2/3;
+    }
+</style>
+</html>

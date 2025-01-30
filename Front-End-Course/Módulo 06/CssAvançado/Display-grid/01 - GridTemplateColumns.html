@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="one space">1</div>
+        <div class="two space">2</div>
+        <div class="tree space">3</div>
+        <div class="four space">4</div>
+        <div class="five space">5</div>
+        <div class="six space">6</div>
+        <div class="seven space">7</div>
+        <div class="eight space">8</div>
+        <div class="nine space">9</div>
+    </div>
+</body>
+<style>
+    /*  - Grid template columns:
+    
+        - Propriedade que aplica no elemento pai. 
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+
+        display: grid;
+
+        grid-template-columns: 100px 100px 100px; /* Com PX */
+        grid-template-columns: 20% 20% 20%; /* Com % */
+        grid-template-columns: 1fr 1fr 1fr; /* Com FR - fração*/
+        grid-template-columns: 2fr 1fr 3fr; /* Com FR */
+        grid-template-columns: repeat(3, 1fr); /* Ex: Quero 3 colunas e cada uma vai ter 100px ou 1fr*/
+        grid-template-columns: minmax(200px, 1fr) 1fr 1fr; /* Com minMax(valor min, valor max) coluna2 coluna3 */
+        grid-template-columns: repeat(auto-fit, minMax(100px, auto)); /* Com auto - Para deixar que ele faça a divisão das colunas automaticamente */
+    }
+
+    .space {
+        color: white;
+        font-size: 30px;
+    }
+
+    .one{
+        background: #333453;
+    }
+
+    .two{
+        background: #259b11;
+    }
+
+    .tree{
+        background: #800534;
+    }
+
+    .four{
+        background: #0c8f9b;
+    }
+
+    .five{
+        background: #ff0a0a;
+    }
+
+    .six{
+        background: #383232;
+    }
+
+    .seven{
+        background: #141963;
+    }
+
+    .eight{
+        background: #85317e;
+    }
+
+    .nine{
+        background: #928b2d;
+    }
+</style>
+</html>

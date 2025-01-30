@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="one space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aliquid consequuntur odio id, facere voluptatibus, obcaecati quos iusto laborum similique ullam beatae delectus natus error? Vel odio nulla ullam iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae repellat blanditiis, facere sequi vero laudantium sit nesciunt, excepturi illum recusandae! Voluptas ipsum doloremque repellendus quisquam, consectetur iure suscipit fugiat!</div>
+        <div class="two space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam, sapiente consequatur quibusdam sint neque ratione dolorum necessitatibus? Doloremque nesciunt obcaecati libero consequatur totam incidunt alias eum optio ad. Dignissimos!</div>
+        <div class="tree space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam rem tenetur odio culpa unde molestiae assumenda iusto. Fugiat totam a veniam minima molestias illo recusandae expedita. Adipisci fugit ratione iste!</div>
+        <div class="four space">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis dicta aliquid deserunt saepe labore, fuga fugit maiores molestias illo et asperiores atque laborum, neque similique aspernatur ad necessitatibus eius!</div>
+        <div class="five space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam porro veritatis eaque itaque nulla pariatur suscipit quibusdam hic a, sint dolorem, quisquam molestiae facere placeat ipsa laudantium quis assumenda iusto.</div>
+        <div class="six space">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque repudiandae quas accusamus ratione dolorem impedit dolores minima quidem vitae nulla molestiae labore vero maxime, sint similique laudantium cupiditate praesentium delectus.</div>
+        <div class="seven space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi ab natus, est assumenda ipsum eos laudantium quibusdam nihil quis consequatur accusantium commodi quisquam harum quasi dicta mollitia officia et!</div>
+        <div class="eight space">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus. Explicabo debitis id, consequatur ipsum cumque saepe sint, nisi impedit, labore fugiat dolores nobis incidunt quis temporibus ducimus sapiente amet?</div>
+        <div class="nine space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quam nulla doloremque sint a atque alias, quos quia? Tempore odio ex corporis provident tenetur, mollitia nemo id quia iure inventore.</div>
+    </div>
+</body>
+<style>
+    /*  - Grid auto rows:
+    
+        - Propriedade que aplica no elemento pai. 
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-auto-rows: 200px; /* Com PX */
+        grid-auto-rows: minmax(500px, auto); /* Para definir o tamanho automatico */
+    }
+
+    .space {
+        color: white;
+        font-size: 16px;
+    }
+
+    .one{
+        background: #333453;
+    }
+
+    .two{
+        background: #259b11;
+    }
+
+    .tree{
+        background: #800534;
+    }
+
+    .four{
+        background: #0c8f9b;
+    }
+
+    .five{
+        background: #ff0a0a;
+    }
+
+    .six{
+        background: #383232;
+    }
+
+    .seven{
+        background: #141963;
+    }
+
+    .eight{
+        background: #85317e;
+    }
+
+    .nine{
+        background: #928b2d;
+    }
+</style>
+</html>

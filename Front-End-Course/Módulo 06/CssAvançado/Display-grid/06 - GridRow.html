@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="one space">1</div>
+        <div class="two space">2</div>
+        <div class="tree space">3</div>
+        <div class="four space">4</div>
+        <div class="five space">5</div>
+        <div class="six space">6</div>
+        <div class="seven space">7</div>
+        <div class="eight space">8</div>
+        <div class="nine space">9</div>
+    </div>
+</body>
+<style>
+    /*  - Grid row:
+    
+        - Propriedade que aplica nos itens. 
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;     
+    }
+
+    .space {
+        color: white;
+        font-size: 30px;
+    }
+
+    .one{
+        background: #333453;
+        grid-row-start: 1; /* Define onde começa a linha */
+        grid-row-end: 3; /* Define onde é o fim da linha*/
+        grid-row: 2/4; /* Atalho - primeiro valor(início)/segundovalor(fim)*/
+    }
+
+    .two{
+        background: #259b11;
+    }
+
+    .tree{
+        background: #800534;
+    }
+
+    .four{
+        background: #0c8f9b;
+    }
+
+    .five{
+        background: #ff0a0a;
+    }
+
+    .six{
+        background: #383232;
+    }
+
+    .seven{
+        background: #141963;
+    }
+
+    .eight{
+        background: #85317e;
+    }
+
+    .nine{
+        background: #928b2d;
+    }
+</style>
+</html>
