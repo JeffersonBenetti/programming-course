@@ -1,0 +1,116 @@
+- Aula 01 - Introdução:
+
+    - React é uma biblioteca de JavaScript que permite criar interfaces de usuário (UI). Ele é usado para desenvolver aplicações web, como o Facebook. 
+
+    - O React é uma linguagem de programação declarativa, o que significa que se preocupa com o que o programador quer fazer, e não com como atingir o objetivo. 
+
+    - O React é usado para: 
+
+        - Controlar elementos dinâmicos, como botões, imagens e banners.
+        - Atualizar informações em tempo real, como gráficos, datas e rankings.
+        - Otimizar o carregamento e a velocidade de um site.
+        - Melhorar a experiência do usuário (UX).
+        - Melhorar o posicionamento do site em rankings de busca (SEO).
+
+    - O React tem um ecossistema de outras bibliotecas JavaScript que cuidam de outros aspectos das aplicações, como: 
+
+        - Roteamento.
+        - Controle de estado.
+        - Autenticação.
+        - Armazenamento.
+        - Consumo de API's.
+        - Testes.
+
+    - Aula 02 - Node e NPM:
+
+        - O NPM é o gerenciador de pacotes do Node que vem junto em sua instalação. Para verificar a versão do NPM instalada, você pode executar o seguinte comando:
+
+            -npm --version
+
+        - O Node apenas executa os scripts, enquanto o NPM é de onde baixamos os pacotes que desejamos utilizar.
+
+        - Por exemplo, se você precisa redimensionar uma imagem, você pode usar uma biblioteca já pronta, disponibilizada através do NPM.
+
+        - Isto acontece em outras tecnologias como o Nuget na Microsoft e o Dart Packages no Flutter.
+
+        - A maior diferença do NPM é que o Node em si não vem com nada "pronto", então quase tudo que utilizamos são pacotes.
+
+        - Os pacotes da nossa aplicação ficam armazenados na pasta NODE_MODULES, na raiz da mesma.
+
+        - Podemos instalar os pacotes localmente ou globalmente, sendo que os pacotes globais, ficam disponíveis no terminal.
+
+    - Aula 3 - Vite e Create React App:
+
+        - O Vite é uma ferramenta para criar aplicações React, enquanto o Create React App (CRA) é um ambiente para aprender React. O Vite é uma alternativa ao CRA, que não é mais recomendado para novos projetos. 
+      
+        - Vite:
+        
+            - É uma ferramenta que oferece suporte nativo para frameworks como o React.
+            - Tem uma configuração simples e intuitiva.
+            - Oferece recarregamento rápido, permitindo ver alterações instantaneamente no navegador.
+            - Gera pacotes menores, o que resulta em tempos de carregamento mais rápidos.
+            - É extensível através da sua API de Extensão e API de JavaScript.
+
+        - Create React App (CRA):
+        
+            - É um ambiente confortável para aprender React.
+            - É uma boa opção para começar um single-page application em React.
+            - Não lida com lógica de backend nem banco de dados.
+            - Deixou de ser mantido desde 2023, o que significa que não irá mais receber nenhuma atualização.
+
+      - Para criar um projeto React com Vite, você pode seguir os seguintes passos: 
+
+            - Instalar o NPM.
+            - Abrir o terminal de comando e escrever o script npm.
+            - Executar o comando npm create vite@lates my-react-app  --template react.
+            - Escolher a opção React na lista.
+            - Executar o comando cd my-react-app.
+            - Executar o comando npm install.
+            - Executar o comando npm run dev.
+
+    
+    - Aula 4 - Vite VS Create React App:
+
+        - O Vite e o Create React App (CRA) são ferramentas para criar aplicativos React. O Vite é mais rápido, flexível e fácil de configurar do que o CRA. 
+        
+            - Ferramentas -> vite / Create React App (CRA):
+            - Configuração -> fázil de configurar / configuração tradicional.
+            - Velocidade -> Mais rápido / Pode demorar mais para rodar ou buildar a aplicação.
+            - Flexibilidade -> Mais flexível / Pode ter menos opções de configuração.
+            - Comando para iniciar app -> npm run dev / npm start
+      
+        - O Vite é uma ferramenta que resolve problemas comuns no desenvolvimento JavaScript e TypeScript. Ele oferece suporte nativo para frameworks como o React.
+
+        - O CRA é uma opção popular para desenvolvedores React que preferem uma abordagem mais tradicional de configuração de projetos. Ele é uma boa maneira de começar um single-page application em React.
+
+        - O Vite introduz o conceito de "carregamento rápido" (fast refresh), que permite um desenvolvimento mais ágil. 
+
+    - Aula 5 - Package.json:
+    
+        - O arquivo package.json é um arquivo JSON que contém informações importantes sobre um projeto JavaScript ou Node.js. Ele é usado para gerenciar dependências, scripts, versão e outros aspectos do projeto.
+
+        - O package.json é fundamental para qualquer projeto Node.js. Ele é necessário antes de publicar o projeto no NPM.
+
+        - O package.json contém informações como: 
+        
+            - Nome do projeto.
+            - Versão do projeto.
+            - Autor do projeto.
+            - Licença do projeto.
+            - Palavras-chave que descrevem o projeto.
+            - Dependências do projeto.
+
+        - Para criar um arquivo package.json, você pode: 
+
+            - Abrir o terminal na pasta raiz do projeto.
+            - Digitar o comando "npm init".
+            - Seguir as instruções do assistente para incluir as informações desejadas.
+
+        - O package.json é importante porque: 
+
+            - Ajuda o gerenciador de pacotes do Node a lidar com o projeto de forma mais eficiente.
+            - Define atributos funcionais do projeto que o NPM usa para instalar dependências.
+            - Permite executar scripts automatizados.
+            - Define a receita para executar um projeto.
+
+    - Aula 6 - Entendendo a estrutura do REACT:
