@@ -1,4 +1,5 @@
-import { FaEtsy } from "react-icons/fa";
+import { CgTrash, CgCheck } from "react-icons/cg";
+
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -40,6 +41,14 @@ export const Button = styled.button`
     font-weight: 700;
     line-height: 2px;
     color: #fff;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transform: scale(1.1);
+    }
 `
 
 export const ListItem = styled.div`
@@ -60,4 +69,25 @@ export const ListItem = styled.div`
         font-size: 20px;
         color: ${ props => props.$isFinished ? '#00ff00' : '#ff0000'};
     }
+`
+
+export const Trash = styled(CgTrash)`
+    font-size: 20px;
+    color: red;
+
+    cursor: pointer;
+`
+
+export const Check = styled(CgCheck)`
+    font-size: 25px;
+    color: green;
+
+    cursor: pointer;
+`
+
+export const H3 = styled.h3`
+    color: #012012;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
 `
