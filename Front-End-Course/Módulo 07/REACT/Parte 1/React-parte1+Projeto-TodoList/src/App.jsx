@@ -11,7 +11,7 @@ function App() {
   // const list = ["Esquentar comida", "Terminar o módulo React parte 1"]
 
   // Aula 13 - Key e 14 - Bibliotéca "uuid".
-  const [list, setList] = useState([{ id: uuid(), task: 'Tarefa' }])
+  const [list, setList] = useState([{ id: uuid(), task: 'Tarefa', finished: true }])
   const [task, setTask] = useState('')
 
   // Aula 11 - Eventos.
@@ -23,7 +23,15 @@ function App() {
   function cliqueiNoBotão() {
     // Nota que quando a CHAVE tem o mesmo nome do VALOR, não precisa colocar os dois(Aulas 15, 16 e 17).
     // Usamos o spread operator para sempre estar add o item existente ao novo array(Aula 18).
-    setList([...list, { id: uuid(), task }])
+    setList([...list, { id: uuid(), task, finished: false }])
+  }
+
+  function concluirTarefa(id){    
+    const  newList = list.map( item => (
+      item.id === id ? {...item, finished: !item.finished} : item
+    )) 
+
+    setList(newList)
   }
 
   return (
@@ -36,9 +44,10 @@ function App() {
           {
             // Aula 12 - Map.
             list.map(item => (
-              <ListItem>
-                <CgCheck />
-                <li key={item.id}>{item.task}</li>
+              // Props - Variavél passando um valor para quem receber.
+              <ListItem key={item.id} $isFinished={item.finished}>
+                <CgCheck onClick={() => concluirTarefa(item.id)} />
+                <li>{item.task}</li>
                 <CgTrash />
               </ListItem>
             ))

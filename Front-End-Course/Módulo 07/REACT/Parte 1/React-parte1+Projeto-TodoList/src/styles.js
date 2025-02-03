@@ -43,7 +43,7 @@ export const Button = styled.button`
 `
 
 export const ListItem = styled.div`
-    background: #e4e4e4;
+    background: ${ props => props.$isFinished ? '#e8ff8b' : '#e4e4e4'};
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 100%;
@@ -56,6 +56,8 @@ export const ListItem = styled.div`
     padding: 0 15px;
 
     li {
-        list-style: none;        
+        list-style: none; 
+        font-size: 20px;
+        color: ${ props => props.$isFinished ? '#00ff00' : '#ff0000'};
     }
 `

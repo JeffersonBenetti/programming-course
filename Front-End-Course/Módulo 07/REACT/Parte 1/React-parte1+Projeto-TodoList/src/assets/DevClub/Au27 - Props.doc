@@ -1,0 +1,21 @@
+- Aula 27 - Props:
+
+    - Props, ou propriedades, são um recurso do React que permite passar dados entre componentes. São uma forma de configurar componentes dinamicamente e reutilizá-los. 
+
+    - Como funcionam? 
+
+        - As props são passadas de um componente pai para um componente filho.
+        - São similares aos atributos do HTML.
+        - São imutáveis, ou seja, não podem ser modificadas.
+        - Cada instância do componente pode receber props diferentes.
+
+    - Para que servem? 
+
+        - Tornam os componentes mais flexíveis e reutilizáveis.
+        - São úteis quando se quer que o fluxo de dados numa aplicação seja dinâmico.
+        - Facilitam o rastreamento de erros.
+
+    - Como usar?
+
+        - Para usar as props, é possível passar funções via props e definir valores padrão para as mesmas. 
+        - É possível nomear props a partir do ponto de vista do próprio componente
