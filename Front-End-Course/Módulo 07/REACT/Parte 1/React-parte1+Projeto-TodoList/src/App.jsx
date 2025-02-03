@@ -1,8 +1,9 @@
 import { v4 as uuid } from 'uuid';
+import { CgTrash, CgCheck } from "react-icons/cg";
 
 import React, { useState } from 'react';
 
-import { Container } from './styles.js'
+import { Container, TodoList, Input, Button, ListItem } from './styles.js'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
   // const list = ["Esquentar comida", "Terminar o módulo React parte 1"]
 
   // Aula 13 - Key e 14 - Bibliotéca "uuid".
-  const [list, setList] = useState([{ id: uuid(), task: 'Terminar o módulo React parte 1' }])
+  const [list, setList] = useState([{ id: uuid(), task: 'Tarefa' }])
   const [task, setTask] = useState('')
 
   // Aula 11 - Eventos.
@@ -27,17 +28,23 @@ function App() {
 
   return (
     <Container>
-      <input onChange={inputMudou} placeholder="O que tenho para fazer.." />
-      <button onClick={cliqueiNoBotão}>Adicionar</button>
+      <TodoList>
+        <Input onChange={inputMudou} placeholder="O que tenho para fazer.." />
+        <Button onClick={cliqueiNoBotão}>Adicionar</Button>
 
-      <ul>
-        {
-          // Aula 12 - Map.
-          list.map(item => (
-            <li key={item.id}>{item.task}</li>
-          ))
-        }
-      </ul>
+        <ul>
+          {
+            // Aula 12 - Map.
+            list.map(item => (
+              <ListItem>
+                <CgCheck />
+                <li key={item.id}>{item.task}</li>
+                <CgTrash />
+              </ListItem>
+            ))
+          }
+        </ul>
+      </TodoList>
     </Container>
   )
 }

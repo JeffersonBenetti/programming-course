@@ -1,0 +1,34 @@
+- Aulas:
+
+    - 21 - Estilos globais no React:
+        - Estilos globais no React são estilos que se aplicam a todas as páginas de uma aplicação. Eles podem ser usados para configurar cores, fontes, ou sobrescrever configurações padrão do navegador. 
+
+        - Para criar estilos globais no React, pode-se usar a biblioteca Styled Components. 
+
+        - Como criar estilos globais com Styled Components:
+
+            - Criar uma pasta chamada styles dentro da pasta src.
+            - Criar um arquivo global.ts dentro da pasta styles.
+            - Importar a configuração do Styled Components.
+            - Exportar o componente funcional criado.
+
+        - Para configurar o estilo global, pode-se usar a função createGlobalStyle.
+
+        - Exemplos de uso de estilos globais:
+
+            - Configurar a família de fontes para toda a tipografia.
+            - Configurar a cor de fundo de cada página.
+            - Substituir algum estilo padrão do navegador.
+            - Gerenciar mudanças dinâmicas no esquema de cores.
+
+    - 22 - Primeiro componente com Styled Components.
+    - 23 - Continuando a estilização da aplicação.
+    - 24 - Fontes no React.
+
+        - Google Fonts: https://fonts.google.com/
+
+    - 25 - Ícones personalizados no React:
+
+        - Site para pegar os ícones: 
+
+    - 26 - Finalização na estilização da aplicação.
