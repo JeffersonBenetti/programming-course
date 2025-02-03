@@ -1,0 +1,23 @@
+- Aula 19 - CSS no React e Aula 10 - Styled Components:
+
+    - O Styled Components é uma biblioteca que permite escrever estilos CSS dentro do JavaScript, o que pode ser útil para o desenvolvimento de aplicações React. Ele pode ser usado para: 
+
+        - Criar estilos dinâmicos e reutilizáveis.
+        - Melhorar a legibilidade do código.
+        - Evitar conflitos de nomenclatura.
+        - Renderizar apenas o CSS necessário.
+        - Melhorar a manutenção do código.
+        - Prevenir bugs.
+        
+    - Algumas vantagens do Styled Components são: 
+
+        - Praticidade de definir cores, valores padrões e breakpoints.
+        - Flexibilidade de usar uma linguagem de programação.
+        - Facilidade de criar estilos que podem ser reutilizados.
+        - Facilidade de fazer alterações em estilos específicos.
+        - Legibilidade do código.
+        - Geração automática de nomes de classes.
+        - Renderização somente do necessário.
+        - Eliminação de chances de name bugs.
+        
+    - O Styled Components é uma escolha popular para o desenvolvimento de aplicações React. 
