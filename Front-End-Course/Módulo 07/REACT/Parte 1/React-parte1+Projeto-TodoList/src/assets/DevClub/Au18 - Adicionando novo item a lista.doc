@@ -1,0 +1,14 @@
+- Aula 18 - Spread Operator:
+
+    - O operador de espalhamento, ou spread operator, é uma ferramenta do JavaScript que permite expandir objetos iteráveis em elementos individuais. No React, ele é utilizado para passar propriedades entre componentes, atualizar estado imutável, clonar componentes, entre outras funções.
+
+    - O operador de espalhamento é representado pelos três pontos, .... 
+
+    - Vantagens Simplifica o código, Evita bugs relacionados à mudança de dados, Melhora a manutenção. 
+    
+    - Como funciona:
+
+        - Expanda os valores de um array ou objeto em outro array ou objeto.
+        - Copie propriedades de um objeto para outro.
+        - Passe um número variável de argumentos para uma função.
+        - Limitações Não consegue clonar objetos profundamente aninhados, Pode sobrescrever propriedades existentes. 
