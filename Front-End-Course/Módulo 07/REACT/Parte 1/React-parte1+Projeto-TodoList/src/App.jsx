@@ -1,10 +1,12 @@
 
 function App() {
 
+  // Aula 11 - Eventos.
   function inputMudou(event){
     console.log(event.target.value)
   }
 
+  // Aula 11 - Eventos.
   function cliqueiNoBotão(){
     console.log('Botão clicado')
   }

@@ -1,0 +1,393 @@
+- Aula 11 - Eventos:
+
+    - O React permite que você adicione manipuladores de eventos ao seu JSX. Os manipuladores de eventos são suas próprias funções que serão acionadas em resposta a interações como clicar, passar o mouse, focar entradas de formulário e assim por diante.
+
+    - Você aprenderá:
+        
+        - Diferentes maneiras de escrever um manipulador de eventos.
+        - Como passar lógica de tratamento de eventos de um componente pai.
+        - Como os eventos se propagam e como pará-los.
+        - Adicionando manipuladores de eventos.
+        
+    - Para adicionar um manipulador de eventos, você primeiro definirá uma função e então a passará como prop para a tag JSX apropriada. Por exemplo, aqui está um botão que ainda não faz nada:
+
+        export default function Button() {
+        return (
+            <button>
+            I don't do anything
+            </button>
+        );
+        }
+
+    - Você pode fazer com que uma mensagem seja exibida quando um usuário clica seguindo estas três etapas:
+
+        - Declare uma função chamada handleClick dentro do seu Buttoncomponente.
+        - Implemente a lógica dentro dessa função (use alertpara mostrar a mensagem).
+        - Adicione onClick={handleClick}ao <button>JSX.
+
+            export default function Button() {
+            function handleClick() {
+                alert('You clicked me!');
+            }
+
+            return (
+                <button onClick={handleClick}>
+                Click me
+                </button>
+            );
+            }
+
+
+            - Você definiu a handleClickfunção e então a passou como uma prop para <button>.   handleClick é um manipulador de eventos. Funções do manipulador de eventos:
+
+                - Geralmente são definidos dentro dos seus componentes.
+                - Tenha nomes que comecem com handle, seguido do nome do evento.
+                - Por convenção, é comum nomear manipuladores de eventos como handleseguido pelo nome do evento. Você verá frequentemente onClick={handleClick}, onMouseEnter={handleMouseEnter}, e assim por diante.
+
+            - Como alternativa, você pode definir um manipulador de eventos inline no JSX:
+
+                <button onClick={function handleClick() {
+                alert('You clicked me!');
+                }}>
+                Ou, mais concisamente, usando uma função de seta:
+
+                <button onClick={() => {
+                alert('You clicked me!');
+                }}>
+
+            - Todos esses estilos são equivalentes. Manipuladores de eventos inline são convenientes para funções curtas.
+
+    - Armadilha:
+
+        - Funções passadas para manipuladores de eventos devem ser passadas, não chamadas. Por exemplo:
+
+            - passando uma função (correto)	chamando uma função (incorreto).
+
+                <button onClick={handleClick}>	<button onClick={handleClick()}>
+
+            - A diferença é sutil. No primeiro exemplo, a handleClickfunção é passada como um onClickmanipulador de eventos. Isso diz ao React para lembrar dela e chamar sua função somente quando o usuário clicar no botão.
+
+            - No segundo exemplo, o ()no final de handleClick()dispara a função imediatamente durante a renderização , sem nenhum clique. Isso ocorre porque o JavaScript dentro do JSX {e} executa imediatamente.
+
+        - Quando você escreve código inline, a mesma armadilha se apresenta de uma maneira diferente:
+
+        - passando uma função (correto)	chamando uma função (incorreto).
+        
+            <button onClick={() => alert('...')}>	<button onClick={alert('...')}>
+
+        - Passar código embutido como esse não será disparado ao clicar — ele será disparado toda vez que o componente for renderizado:
+
+            // This alert fires when the component renders, not when clicked!
+                <button onClick={alert('You clicked me!')}>
+
+        - Se você quiser definir seu manipulador de eventos inline, envolva-o em uma função anônima como esta:
+
+            <button onClick={() => alert('You clicked me!')}>
+
+        - Em vez de executar o código interno a cada renderização, isso cria uma função a ser chamada posteriormente.
+
+        - Em ambos os casos, o que você quer passar é uma função:
+
+            <button onClick={handleClick}>passa a handleClickfunção.
+            <button onClick={() => alert('...')}>passa a () => alert('...')função.
+
+    - Lendo adereços em manipuladores de eventos:
+
+        - Como os manipuladores de eventos são declarados dentro de um componente, eles têm acesso aos props do componente. Aqui está um botão que, quando clicado, mostra um alerta com seu messageprop:
+
+            function AlertButton({ message, children }) {
+            return (
+                <button onClick={() => alert(message)}>
+                {children}
+                </button>
+            );
+            }
+
+            export default function Toolbar() {
+            return (
+                <div>
+                <AlertButton message="Playing!">
+                    Play Movie
+                </AlertButton>
+                <AlertButton message="Uploading!">
+                    Upload Image
+                </AlertButton>
+                </div>
+            );
+            }
+
+        - Isso permite que esses dois botões mostrem mensagens diferentes. Tente alterar as mensagens passadas a eles.
+
+    - Passando manipuladores de eventos como adereços:
+
+        - Frequentemente, você vai querer que o componente pai especifique um manipulador de eventos do filho. Considere botões: dependendo de onde você estiver usando um Buttoncomponente, você pode querer executar uma função diferente — talvez um reproduza um filme e outro carregue uma imagem.
+
+        - Para fazer isso, passe uma propriedade que o componente recebe de seu pai como o manipulador de eventos, assim:
+
+            function Button({ onClick, children }) {
+            return (
+                <button onClick={onClick}>
+                {children}
+                </button>
+            );
+            }
+
+            function PlayButton({ movieName }) {
+            function handlePlayClick() {
+                alert(`Playing ${movieName}!`);
+            }
+
+            return (
+                <Button onClick={handlePlayClick}>
+                Play "{movieName}"
+                </Button>
+            );
+            }
+
+            function UploadButton() {
+            return (
+                <Button onClick={() => alert('Uploading!')}>
+                Upload Image
+                </Button>
+            );
+            }
+
+            export default function Toolbar() {
+            return (
+                <div>
+                <PlayButton movieName="Kiki's Delivery Service" />
+                <UploadButton />
+                </div>
+            );
+            }
+
+        - Aqui, o Toolbarcomponente renderiza a PlayButton e an UploadButton:
+
+        - PlayButton passa handlePlayClick como onClick suporte para o Button interior.
+        - UploadButton passa () => alert('Uploading!') como onClick suporte para o Button interior.
+        - Finalmente, seu Buttoncomponente aceita uma prop chamada onClick. Ele passa essa prop diretamente para o navegador integrado <button> com onClick={onClick}. Isso diz ao React para chamar a função passada ao clicar.
+
+        - Se você usa um sistema de design , é comum que componentes como botões contenham estilo, mas não especifiquem comportamento. Em vez disso, componentes como PlayButton e UploadButton passarão manipuladores de eventos para baixo.
+
+    - Nomeando props do manipulador de eventos:
+
+        - Componentes integrados como <button> e <div> só suportam nomes de eventos do navegador como onClick. No entanto, quando você estiver construindo seus próprios componentes, você pode nomear seus props manipuladores de eventos da maneira que quiser.
+
+        - Por convenção, as propriedades do manipulador de eventos devem começar com on, seguido por uma letra maiúscula.
+
+        - Por exemplo, o prop Button do componente onClick poderia ter sido chamado onSmash:
+
+            function Button({ onSmash, children }) {
+            return (
+                <button onClick={onSmash}>
+                {children}
+                </button>
+            );
+            }
+
+            export default function App() {
+            return (
+                <div>
+                <Button onSmash={() => alert('Playing!')}>
+                    Play Movie
+                </Button>
+                <Button onSmash={() => alert('Uploading!')}>
+                    Upload Image
+                </Button>
+                </div>
+            );
+            }
+
+        - Neste exemplo, <button onClick={onSmash}> mostra que o navegador <button>(minúsculas) ainda precisa de um prop chamado onClick, mas o nome do prop recebido pelo seu Button componente personalizado fica a seu critério!
+
+        - Quando seu componente suporta múltiplas interações, você pode nomear props de manipuladores de eventos para conceitos específicos do aplicativo. Por exemplo, este Toolbarcomponente recebe onPlayMoviee onUploadImage manipuladores de eventos:
+
+            export default function App() {
+            return (
+                <Toolbar
+                onPlayMovie={() => alert('Playing!')}
+                onUploadImage={() => alert('Uploading!')}
+                />
+            );
+            }
+
+            function Toolbar({ onPlayMovie, onUploadImage }) {
+            return (
+                <div>
+                <Button onClick={onPlayMovie}>
+                    Play Movie
+                </Button>
+                <Button onClick={onUploadImage}>
+                    Upload Image
+                </Button>
+                </div>
+            );
+            }
+
+            function Button({ onClick, children }) {
+            return (
+                <button onClick={onClick}>
+                {children}
+                </button>
+            );
+            }
+
+        - Observe como o App componente não precisa saber o que Toolbar fará com onPlayMovie ou onUploadImage. Esse é um detalhe de implementação do Toolbar. Aqui, Toolbar passa-os como onClick manipuladores para seu Buttons, mas ele poderia depois também acioná-los em um atalho de teclado. Nomear props após interações específicas do aplicativo como onPlayMovie dá a você uma flexibilidade de mudar como eles são usados ​​depois.
+
+    - Observação:
+
+        - Certifique-se de usar as tags HTML apropriadas para seus manipuladores de eventos. Por exemplo, para manipular cliques, use <button onClick={handleClick}> em vez de <div onClick={handleClick}>. Usar um navegador real <button> habilita comportamentos de navegador integrados, como navegação por teclado. Se você não gosta do estilo padrão do navegador de um botão e quer que ele pareça mais com um link ou um elemento de IU diferente, você pode fazer isso com CSS. Saiba mais sobre como escrever marcação acessível.
+
+- Propagação de eventos:
+
+    - Os manipuladores de eventos também capturam eventos de quaisquer filhos que seu componente possa ter. Dizemos que um evento “borbulha” ou “se propaga” para cima na árvore: ele começa onde o evento aconteceu e então sobe na árvore.
+
+    - Isto <div> contém dois botões. Ambos os botões <div> e cada um têm seus próprios onClick manipuladores. Quais manipuladores você acha que serão acionados quando você clicar em um botão?
+
+        export default function Toolbar() {
+        return (
+            <div className="Toolbar" onClick={() => {
+            alert('You clicked on the toolbar!');
+            }}>
+            <button onClick={() => alert('Playing!')}>
+                Play Movie
+            </button>
+            <button onClick={() => alert('Uploading!')}>
+                Upload Image
+            </button>
+            </div>
+        );
+        }
+
+    - Se você clicar em qualquer um dos botões, ele onClick será executado primeiro, seguido pelo pai <div>. onClickEntão duas mensagens aparecerão. Se você clicar na própria barra de ferramentas, apenas o pai <div> será onClick executado.
+
+    - Armadilha:
+
+        - Todos os eventos se propagam no React, exceto onScroll, que só funciona na tag JSX à qual você o anexa.
+
+    - Parando a propagação:
+
+        - Os manipuladores de eventos recebem um objeto de evento como seu único argumento. Por convenção, ele é geralmente chamado de e, que significa “evento”. Você pode usar esse objeto para ler informações sobre o evento.
+
+        - Esse objeto de evento também permite que você pare a propagação. Se você quiser evitar que um evento alcance os componentes pais, você precisa chamar e.stopPropagation() como esse Button componente faz:
+
+            function Button({ onClick, children }) {
+            return (
+                <button onClick={e => {
+                e.stopPropagation();
+                onClick();
+                }}>
+                {children}
+                </button>
+            );
+            }
+
+            export default function Toolbar() {
+            return (
+                <div className="Toolbar" onClick={() => {
+                alert('You clicked on the toolbar!');
+                }}>
+                <Button onClick={() => alert('Playing!')}>
+                    Play Movie
+                </Button>
+                <Button onClick={() => alert('Uploading!')}>
+                    Upload Image
+                </Button>
+                </div>
+            );
+            }
+
+        - Quando você clica em um botão:
+
+            - O React chama o onClick manipulador passado para <button>.
+            - Esse manipulador, definido em Button, faz o seguinte:
+            - Chamadas e.stopPropagation(), evitando que o evento se espalhe ainda mais.
+            - Chama a onClickfunção, que é uma propriedade passada do Toolbar componente.
+            - Essa função, definida no Toolbar componente, exibe o alerta do próprio botão.
+            - Como a propagação foi interrompida, o manipulador <div> do pai não é executado.onClick
+            - Como resultado de e.stopPropagation(), clicar nos botões agora mostra apenas um único alerta (do <button>) em vez dos dois (do <button> e da barra de ferramentas pai <div>). Clicar em um botão não é a mesma coisa que clicar na barra de ferramentas ao redor, então parar a propagação faz sentido para esta IU.
+
+    - Mergulho profundo:
+
+        - Eventos da fase de captura:
+
+        - Em casos raros, você pode precisar capturar todos os eventos em elementos filhos, mesmo se eles pararem a propagação. Por exemplo, talvez você queira registrar cada clique no analytics, independentemente da lógica de propagação. Você pode fazer isso adicionando Capture no final do nome do evento:
+
+            <div onClickCapture={() => { /* this runs first */ }}>
+            <button onClick={e => e.stopPropagation()} />
+            <button onClick={e => e.stopPropagation()} />
+            </div>
+
+    - Cada evento se propaga em três fases:
+
+        - Ele viaja para baixo, chamando todos onClick Captureos manipuladores.
+        - Ele executa o onClick manipulador do elemento clicado.
+        - Ele viaja para cima, chamando todos onClickos manipuladores.
+        - Eventos de captura são úteis para códigos como roteadores ou análises, mas você provavelmente não os usará em códigos de aplicativos.
+
+    - Passando manipuladores como alternativa à propagação:
+
+        - Observe como esse manipulador de cliques executa uma linha de código e então chama a onClick propriedade passada pelo pai:
+
+            function Button({ onClick, children }) {
+            return (
+                <button onClick={e => {
+                e.stopPropagation();
+                onClick();
+                }}>
+                {children}
+                </button>
+            );
+            }
+
+        - Você pode adicionar mais código a esse manipulador antes de chamar o onClick manipulador de eventos pai também. Esse padrão fornece uma alternativa à propagação. Ele permite que o componente filho manipule o evento, enquanto também permite que o componente pai especifique algum comportamento adicional. Ao contrário da propagação, não é automático. Mas o benefício desse padrão é que você pode seguir claramente toda a cadeia de código que é executada como resultado de algum evento.
+
+    - Se você depende de propagação e é difícil rastrear quais manipuladores são executados e por quê, tente esta abordagem.
+
+        - Prevenção de comportamento padrão:
+
+        - Alguns eventos do navegador têm comportamento padrão associado a eles. Por exemplo, um <form> evento submit, que acontece quando um botão dentro dele é clicado, recarregará a página inteira por padrão:
+
+            export default function Signup() {
+            return (
+                <form onSubmit={() => alert('Submitting!')}>
+                <input />
+                <button>Send</button>
+                </form>
+            );
+            }
+
+        - Você pode chamar e.preventDefault()o objeto de evento para impedir que isso aconteça:
+
+            export default function Signup() {
+            return (
+                <form onSubmit={e => {
+                e.preventDefault();
+                alert('Submitting!');
+                }}>
+                <input />
+                <button>Send</button>
+                </form>
+            );
+            }
+
+        - Não confunda e.stopPropagation() e e.preventDefault(). Ambos são úteis, mas não estão relacionados:
+
+            - e.stopPropagation() impede que os manipuladores de eventos anexados às tags acima sejam disparados.
+            - e.preventDefault() impede o comportamento padrão do navegador para os poucos eventos que o possuem.
+        - Os manipuladores de eventos podem ter efeitos colaterais?
+                - Absolutamente! Os manipuladores de eventos são o melhor lugar para efeitos colaterais.
+
+    - Ao contrário das funções de renderização, os manipuladores de eventos não precisam ser puros, então é um ótimo lugar para mudar algo — por exemplo, mudar o valor de uma entrada em resposta à digitação ou mudar uma lista em resposta ao pressionamento de um botão. No entanto, para mudar algumas informações, você primeiro precisa de alguma forma de armazená-las. No React, isso é feito usando state, a memória de um componente. Você aprenderá tudo sobre isso na próxima página.
+
+    - Recapitular:
+
+        - Você pode manipular eventos passando uma função como prop para um elemento como <button>.
+        - Os manipuladores de eventos devem ser passados, não chamados! onClick={handleClick} , não onClick={handleClick()}.
+        - Você pode definir uma função de manipulador de eventos separadamente ou em linha.
+        - Os manipuladores de eventos são definidos dentro de um componente, para que possam acessar propriedades.
+        - Você pode declarar um manipulador de eventos em um pai e passá-lo como um prop para um filho.
+        - Você pode definir seus próprios objetos de manipulador de eventos com nomes específicos do aplicativo.
+        - Eventos se propagam para cima. Invoque e.stopPropagation() o primeiro argumento para evitar isso.
+        - Eventos podem ter comportamento indesejado do navegador padrão. Ligue e.preventDefault() para evitar isso.
+        - Chamar explicitamente uma propriedade de manipulador de eventos de um manipulador filho é uma boa alternativa à propagação.
