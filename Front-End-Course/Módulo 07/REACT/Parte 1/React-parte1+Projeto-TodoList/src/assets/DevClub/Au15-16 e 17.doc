@@ -1,0 +1,180 @@
+- Aulas 15, 16 e 17 Hooks:
+
+    - Hooks são uma nova adição ao React 16.8. Eles permitem que você use o state e outros recursos do React sem escrever uma classe.
+
+        import React, { useState } from 'react';
+
+        function Example() {
+        // Declare uma nova variável de state, a qual chamaremos de "count"
+        const [count, setCount] = useState(0);
+
+        return (
+            <div>
+            <p>Você clicou {count} vezes</p>
+            <button onClick={() => setCount(count + 1)}>
+                Clique aqui
+            </button>
+            </div>
+        );
+        }
+
+    - Essa nova função useState é o primeiro “Hook” que nós iremos aprender, mas este exemplo é só um gostinho. Não se preocupe se isso ainda não fizer sentido!
+
+    - State Hook:
+
+        - Este exemplo renderiza um contador. Quando você clica no botão, ele incrementa o valor:
+
+            import React, { useState } from 'react';
+
+            function Example() {
+            // Declara uma nova variável de state, que chamaremos de "count"
+            const [count, setCount] = useState(0);
+
+            return (
+                <div>
+                <p>Você clicou {count} vezes</p>
+                <button onClick={() => setCount(count + 1)}>
+                    Clique aqui
+                </button>
+                </div>
+            );
+            }
+
+        - Aqui, useState é um Hook (nós vamos falar sobre o que isso significa em instantes). Nós o chamamos dentro de um componente funcional para adicionar alguns states locais a ele. React irá preservar este state entre re-renderizações. useState retorna um par: o valor do state atual e uma função que permite atualizá-lo. Você pode chamar essa função a partir de um manipulador de evento ou de qualquer outro lugar. É parecido com this.setState em uma classe, exceto que não mescla o antigo state com o novo. (Nós iremos mostrar um exemplo comparando useState com this.state em Utilizando o State Hook.)
+
+        - O único argumento para useState é o state inicial. No exemplo acima, é 0 porque nosso contador começa do zero. Perceba que diferente de this.state, o state não precisa ser um objeto — apesar de que possa ser se você quiser. O argumento de state inicial é utilizado apenas durante a primeira renderização.
+
+    - Declarando múltiplas variáveis de state:
+
+        - Você pode utilizar o State Hook mais de uma vez em um único componente:
+
+            function ExampleWithManyStates() {
+            // Declara várias variáveis de state!
+            const [age, setAge] = useState(42);
+            const [fruit, setFruit] = useState('banana');
+            const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
+            // ...
+            }
+
+        - A sintaxe de desestruturação de arrays nos permite atribuir diferentes nomes para as variáveis de state que declaramos chamando useState. Esses nomes não fazem parte da API useState. Em vez disso, React presume que se você chamar useState muitas vezes, você faz isso na mesma ordem a cada renderização. Mais tarde, voltaremos no porquê disso funcionar e quando será útil.
+
+    - Desestruturação de array:
+
+        - Atribuição básica de variáveis
+
+            const foo = ["one", "two", "three"];
+
+            const [red, yellow, green] = foo;
+            console.log(red); // "one"
+            console.log(yellow); // "two"
+            console.log(green); // "three"
+
+        - Desestruturação com mais elementos do que a fonte:
+
+            - Em uma desestruturação de array de um array de comprimento N especificado no lado direito da atribuição, se o número de variáveis ​​especificado no lado esquerdo da atribuição for maior que N , somente as primeiras N variáveis ​​receberão valores. Os valores das variáveis ​​restantes serão indefinidos.
+
+                const foo = ["one", "two"];
+
+                const [red, yellow, green, blue] = foo;
+                console.log(red); // "one"
+                console.log(yellow); // "two"
+                console.log(green); // undefined
+                console.log(blue); // undefined
+
+    - Trocando variáveis:
+
+        - Valores de duas variáveis ​​podem ser trocados em uma expressão de desestruturação.
+
+        - Sem a atribuição de desestruturação, a troca de dois valores requer uma variável temporária (ou, em algumas linguagens de baixo nível, o truque de troca XOR ).
+
+            let a = 1;
+            let b = 3;
+
+            [a, b] = [b, a];
+            console.log(a); // 3
+            console.log(b); // 1
+
+            const arr = [1, 2, 3];
+            [arr[2], arr[1]] = [arr[1], arr[2]];
+            console.log(arr); // [1, 3, 2]
+
+    - Analisando uma matriz retornada de uma função:
+
+        - Sempre foi possível retornar um array de uma função. A desestruturação pode tornar o trabalho com um valor de retorno de array mais conciso.
+
+        - Neste exemplo, f() retorna os valores [1, 2] como saída, que podem ser analisados ​​em uma única linha com desestruturação.
+
+            function f() {
+            return [1, 2];
+            }
+
+            const [a, b] = f();
+            console.log(a); // 1
+            console.log(b); // 2
+
+    - Ignorando alguns valores retornados:
+
+        - Você pode ignorar valores de retorno nos quais não está interessado:
+
+            function f() {
+            return [1, 2, 3];
+            }
+
+            const [a, , b] = f();
+            console.log(a); // 1
+            console.log(b); // 3
+
+            const [c] = f();
+            console.log(c); // 1
+
+        - Você também pode ignorar todos os valores retornados:
+
+            [, ,] = f();
+
+    - Usando um padrão de ligação como propriedade rest:
+
+        - A propriedade rest da atribuição de desestruturação de array pode ser outro array ou padrão de vinculação de objeto. A desestruturação interna desestrutura do array criado após coletar os elementos rest, então você não pode acessar nenhuma propriedade presente no iterável original dessa forma.
+
+            const [a, b, ...{ length }] = [1, 2, 3];
+            console.log(a, b, length); // 1 2 1
+            js
+            Copiar para a área de transferência
+            const [a, b, ...[c, d]] = [1, 2, 3, 4];
+            console.log(a, b, c, d); // 1 2 3 4
+
+        - Esses padrões de vinculação podem até ser aninhados, desde que cada propriedade rest seja a última da lista.
+    
+            const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+            console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
+
+        - Por outro lado, a desestruturação de objetos só pode ter um identificador como propriedade rest.
+
+            const { a, ...{ b } } = { a: 1, b: 2 };
+            // SyntaxError: `...` must be followed by an identifier in declaration contexts
+
+            let a, b;
+            ({ a, ...{ b } } = { a: 1, b: 2 });
+            // SyntaxError: `...` must be followed by an assignable reference in assignment contexts
+
+    - Mas, o que é um Hook?
+
+        - Hooks são funções que permitem a você “ligar-se” aos recursos de state e ciclo de vida do React a partir de componentes funcionais.Hooks não funcionam dentro de classes — eles permitem que você use React sem classes. (Nós não recomendamos reescrever seus componentes já existentes de um dia para o outro, mas você pode começar a usar Hooks nos novos se você quiser.)
+
+    - React fornece alguns Hooks internos como useState. Você também pode criar os seus próprios Hooks para reutilizar o comportamento de state entre componentes diferentes. Vamos dar uma olhada nos Hooks internos primeiramente.
+
+- imutabilidade no React:
+
+    - A imutabilidade no React é um conceito de programação que impede a alteração direta de valores de estado. O React usa esse conceito para construir componentes puros. 
+
+    - O que é imutabilidade?
+
+        - Imutabilidade é um conceito de programação que significa que um valor não pode ser alterado após ser criado.
+
+        - A imutabilidade é um conceito fundamental na programação funcional e orientada a objetos.
+
+    - Como funciona a imutabilidade no React? 
+
+        - O React só dispara uma nova renderização quando um estado é alterado por meio do método setState.
+        - Alterar diretamente um estado não reflete o novo valor na tela.
+
+    - Quais são os benefícios da imutabilidade? Ajuda a eliminar bugs, Aumenta a confiabilidade e previsibilidade do código, Promove a integridade e a estabilidade do sistema, Ajuda a construir componentes puros. 

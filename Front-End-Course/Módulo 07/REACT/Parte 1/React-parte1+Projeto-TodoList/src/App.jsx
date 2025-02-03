@@ -1,19 +1,18 @@
 import { v4 as uuid } from 'uuid';
 
+import React, { useState } from 'react';
+
 function App() {
 
   // Aula 12 - Map.
   // const list = ["Esquentar comida", "Terminar o módulo React parte 1"]
-  
+
   // Aula 13 - Key e 14 - Bibliotéca "uuid".
-  const list = [
-    {id: uuid(), task: 'Terminar o módulo React parte 1'},
-    {id: uuid(), task: 'Esquentar comida'}
-  ]
+  const [list, setList] = useState([{id: uuid(), task: 'Terminar o módulo React parte 1'}])
 
   // Aula 11 - Eventos.
   function inputMudou(event){
-    console.log(event.target.value)
+    setList({id: uuid(), task: event.target.value})
   }
 
   // Aula 11 - Eventos.
