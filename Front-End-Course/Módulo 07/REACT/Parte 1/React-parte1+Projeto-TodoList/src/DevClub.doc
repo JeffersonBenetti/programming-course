@@ -21,96 +21,551 @@
         - Consumo de API's.
         - Testes.
 
-    - Aula 02 - Node e NPM:
+- Aula 02 - Node e NPM:
 
-        - O NPM é o gerenciador de pacotes do Node que vem junto em sua instalação. Para verificar a versão do NPM instalada, você pode executar o seguinte comando:
+    - O NPM é o gerenciador de pacotes do Node que vem junto em sua instalação. Para verificar a versão do NPM instalada, você pode executar o seguinte comando:
 
-            -npm --version
+        -npm --version
 
-        - O Node apenas executa os scripts, enquanto o NPM é de onde baixamos os pacotes que desejamos utilizar.
+    - O Node apenas executa os scripts, enquanto o NPM é de onde baixamos os pacotes que desejamos utilizar.
+    - Por exemplo, se você precisa redimensionar uma imagem, você pode usar uma biblioteca já pronta, disponibilizada através do NPM.
+    - Isto acontece em outras tecnologias como o Nuget na Microsoft e o Dart Packages no Flutter.
+    - A maior diferença do NPM é que o Node em si não vem com nada "pronto", então quase tudo que utilizamos são pacotes.
+    - Os pacotes da nossa aplicação ficam armazenados na pasta NODE_MODULES, na raiz da mesma.
+    - Podemos instalar os pacotes localmente ou globalmente, sendo que os pacotes globais, ficam disponíveis no terminal.
 
-        - Por exemplo, se você precisa redimensionar uma imagem, você pode usar uma biblioteca já pronta, disponibilizada através do NPM.
+- Aula 3 - Vite e Create React App:
 
-        - Isto acontece em outras tecnologias como o Nuget na Microsoft e o Dart Packages no Flutter.
-
-        - A maior diferença do NPM é que o Node em si não vem com nada "pronto", então quase tudo que utilizamos são pacotes.
-
-        - Os pacotes da nossa aplicação ficam armazenados na pasta NODE_MODULES, na raiz da mesma.
-
-        - Podemos instalar os pacotes localmente ou globalmente, sendo que os pacotes globais, ficam disponíveis no terminal.
-
-    - Aula 3 - Vite e Create React App:
-
-        - O Vite é uma ferramenta para criar aplicações React, enquanto o Create React App (CRA) é um ambiente para aprender React. O Vite é uma alternativa ao CRA, que não é mais recomendado para novos projetos. 
+     - O Vite é uma ferramenta para criar aplicações React, enquanto o Create React App (CRA) é um ambiente para aprender React. O Vite é uma alternativa ao CRA, que não é mais recomendado para novos projetos. 
       
-        - Vite:
+    - Vite:
         
-            - É uma ferramenta que oferece suporte nativo para frameworks como o React.
-            - Tem uma configuração simples e intuitiva.
-            - Oferece recarregamento rápido, permitindo ver alterações instantaneamente no navegador.
-            - Gera pacotes menores, o que resulta em tempos de carregamento mais rápidos.
-            - É extensível através da sua API de Extensão e API de JavaScript.
+        - É uma ferramenta que oferece suporte nativo para frameworks como o React.
+        - Tem uma configuração simples e intuitiva.
+        - Oferece recarregamento rápido, permitindo ver alterações instantaneamente no navegador.
+        - Gera pacotes menores, o que resulta em tempos de carregamento mais rápidos.
+        - É extensível através da sua API de Extensão e API de JavaScript.
 
-        - Create React App (CRA):
+    - Create React App (CRA):
         
-            - É um ambiente confortável para aprender React.
-            - É uma boa opção para começar um single-page application em React.
-            - Não lida com lógica de backend nem banco de dados.
-            - Deixou de ser mantido desde 2023, o que significa que não irá mais receber nenhuma atualização.
+        - É um ambiente confortável para aprender React.
+        - É uma boa opção para começar um single-page application em React.
+        - Não lida com lógica de backend nem banco de dados.
+        - Deixou de ser mantido desde 2023, o que significa que não irá mais receber nenhuma atualização.
 
-      - Para criar um projeto React com Vite, você pode seguir os seguintes passos: 
+    - Para criar um projeto React com Vite, você pode seguir os seguintes passos: 
 
-            - Instalar o NPM.
-            - Abrir o terminal de comando e escrever o script npm.
-            - Executar o comando npm create vite@lates my-react-app  --template react.
-            - Escolher a opção React na lista.
-            - Executar o comando cd my-react-app.
-            - Executar o comando npm install.
-            - Executar o comando npm run dev.
+        - Instalar o NPM.
+        - Abrir o terminal de comando e escrever o script npm.
+        - Executar o comando npm create vite@lates my-react-app  --template react.
+        - Escolher a opção React na lista.
+        - Executar o comando cd my-react-app.
+        - Executar o comando npm install.
+        - Executar o comando npm run dev.
 
     
-    - Aula 4 - Vite VS Create React App:
+- Aula 4 - Vite VS Create React App:
 
-        - O Vite e o Create React App (CRA) são ferramentas para criar aplicativos React. O Vite é mais rápido, flexível e fácil de configurar do que o CRA. 
+    - O Vite e o Create React App (CRA) são ferramentas para criar aplicativos React. O Vite é mais rápido, flexível e fácil de configurar do que o CRA. 
         
-            - Ferramentas -> vite / Create React App (CRA):
-            - Configuração -> fázil de configurar / configuração tradicional.
-            - Velocidade -> Mais rápido / Pode demorar mais para rodar ou buildar a aplicação.
-            - Flexibilidade -> Mais flexível / Pode ter menos opções de configuração.
-            - Comando para iniciar app -> npm run dev / npm start
+        - Ferramentas -> vite / Create React App (CRA):
+        - Configuração -> fázil de configurar / configuração tradicional.
+        - Velocidade -> Mais rápido / Pode demorar mais para rodar ou buildar a aplicação.
+        - Flexibilidade -> Mais flexível / Pode ter menos opções de configuração.
+        - Comando para iniciar app -> npm run dev / npm start
       
-        - O Vite é uma ferramenta que resolve problemas comuns no desenvolvimento JavaScript e TypeScript. Ele oferece suporte nativo para frameworks como o React.
+    - O Vite é uma ferramenta que resolve problemas comuns no desenvolvimento JavaScript e TypeScript. Ele oferece suporte nativo para frameworks como o React.
 
-        - O CRA é uma opção popular para desenvolvedores React que preferem uma abordagem mais tradicional de configuração de projetos. Ele é uma boa maneira de começar um single-page application em React.
+    - O CRA é uma opção popular para desenvolvedores React que preferem uma abordagem mais tradicional de configuração de projetos. Ele é uma boa maneira de começar um single-page application em React.
 
-        - O Vite introduz o conceito de "carregamento rápido" (fast refresh), que permite um desenvolvimento mais ágil. 
+    - O Vite introduz o conceito de "carregamento rápido" (fast refresh), que permite um desenvolvimento mais ágil. 
 
-    - Aula 5 - Package.json:
+- Aula 5 - Package.json:
     
-        - O arquivo package.json é um arquivo JSON que contém informações importantes sobre um projeto JavaScript ou Node.js. Ele é usado para gerenciar dependências, scripts, versão e outros aspectos do projeto.
+    - O arquivo package.json é um arquivo JSON que contém informações importantes sobre um projeto JavaScript ou Node.js. Ele é usado para gerenciar dependências, scripts, versão e outros aspectos do projeto.
 
-        - O package.json é fundamental para qualquer projeto Node.js. Ele é necessário antes de publicar o projeto no NPM.
+    - O package.json é fundamental para qualquer projeto Node.js. Ele é necessário antes de publicar o projeto no NPM.
 
-        - O package.json contém informações como: 
+    - O package.json contém informações como: 
         
-            - Nome do projeto.
-            - Versão do projeto.
-            - Autor do projeto.
-            - Licença do projeto.
-            - Palavras-chave que descrevem o projeto.
-            - Dependências do projeto.
+        - Nome do projeto.
+        - Versão do projeto.
+        - Autor do projeto.
+        - Licença do projeto.
+        - Palavras-chave que descrevem o projeto.
+        - Dependências do projeto.
 
-        - Para criar um arquivo package.json, você pode: 
+    - Para criar um arquivo package.json, você pode: 
 
-            - Abrir o terminal na pasta raiz do projeto.
-            - Digitar o comando "npm init".
-            - Seguir as instruções do assistente para incluir as informações desejadas.
+        - Abrir o terminal na pasta raiz do projeto.
+        - Digitar o comando "npm init".
+        - Seguir as instruções do assistente para incluir as informações desejadas.
 
-        - O package.json é importante porque: 
+    - O package.json é importante porque: 
 
-            - Ajuda o gerenciador de pacotes do Node a lidar com o projeto de forma mais eficiente.
-            - Define atributos funcionais do projeto que o NPM usa para instalar dependências.
-            - Permite executar scripts automatizados.
-            - Define a receita para executar um projeto.
+        - Ajuda o gerenciador de pacotes do Node a lidar com o projeto de forma mais eficiente.
+        - Define atributos funcionais do projeto que o NPM usa para instalar dependências.
+        - Permite executar scripts automatizados.
+        - Define a receita para executar um projeto.
 
-    - Aula 6 - Entendendo a estrutura do REACT:
+- Aula 6 - Entendendo a estrutura do REACT:
+
+    - Estrutura de arquivos:
+
+    - Existe uma maneira recomendada para estruturar os projetos em React?
+
+    - O React não opina sobre como você deve estruturar o projeto. Dito isso, existem algumas abordagens populares que você pode experimentar.
+
+    - Agrupar por funcionalidades ou rotas:
+
+        - Uma maneira bem comum para estruturar os projetos é colocar CSS, JS e testes juntos dentro de pastas agrupadas por funcionalidades ou rotas.
+
+            common/
+                Avatar.js
+                Avatar.css
+                APIUtils.js
+                APIUtils.test.js
+            feed/
+                index.js
+                Feed.js
+                Feed.css
+                FeedStory.js
+                FeedStory.test.js
+                FeedAPI.js
+            profile/
+                index.js
+                Profile.js
+                ProfileHeader.js
+                ProfileHeader.css
+                ProfileAPI.js
+
+    - A definição de “funcionalidade” não é universal e cabe a você escolher a granularidade. Se você não conseguir criar uma lista de pastas de alto nível, você pode perguntar para os usuários do seu produto quais são as partes principais que ele contém e usar o modelo mental como um plano.
+
+    - Agrupar por tipo de arquivo:
+
+        - Outra maneira popular de estruturar projetos é agrupar arquivos semelhantes pelo tipo, por exemplo:
+
+            api/
+                APIUtils.js
+                APIUtils.test.js
+                ProfileAPI.js
+                UserAPI.js
+            components/
+                Avatar.js
+                Avatar.css
+                Feed.js
+                Feed.css
+                FeedStory.js
+                FeedStory.test.js
+                Profile.js
+                ProfileHeader.js
+                ProfileHeader.css
+
+    - Algumas pessoas também preferem ir além, e separar os componentes em pastas diferentes, dependendo do papel que desempenham na aplicação. Por exemplo o Atomic Design que é uma metodologia de design construída sobre este princípio. Lembre-se de que é mais produtivo tratar essas metodologias como exemplos úteis, ao invés de seguir regras estritas.
+
+    - Evite muito aninhamento:
+
+        - Há diversos pontos problemáticos associados ao aninhamento de pastas em projetos JavaScript. Torna-se mais difícil gravar importações relativas entre elas ou atualizá-las quando os arquivos são movidos. A menos que você tenha um motivo muito convincente para usar uma estrutura de pastas aninhadas, considere limitar-se a um máximo de três ou quatro pastas aninhadas em um único projeto. Claro, isso é apenas uma recomendação e pode não ser relevante para o seu projeto.
+
+    - Não pense muito:
+
+        - Se você está apenas começando um projeto, não gaste mais do que cinco minutos na escolha de uma estrutura de arquivos. Escolha qualquer uma das abordagens acima (ou crie as suas próprias) e comece a escrever o código! Você provavelmente vai querer repensá-lo de qualquer jeito depois de ter escrito algum código.
+
+        - Se você se sentir completamente preso, comece mantendo todos os arquivos em uma única pasta. Eventualmente ele crescerá o suficiente para que você deseje separar alguns arquivos dos demais. A essa altura, você terá conhecimento suficiente para saber quais arquivos são modificados juntos com mais frequência. Em geral, é uma boa ideia manter os arquivos que costumam ser alterados juntos, próximos uns dos outros. Este princípio é chamado de “colocation”.
+
+        - À medida que os projetos vão crescendo, eles costumam usar uma mistura de ambas as abordagens acima na prática. Então escolher a abordagem “certa” no começo não é muito importante.
+
+- Aula 7 - Node Modules:
+
+    - A pasta node_modules é onde o Node.js armazena todas as dependências do seu projeto. Ela é gerada automaticamente quando você executa o comando "npm install" ou "yarn", com base nas informações do arquivo package.json do seu projeto.
+
+    - A boa notícia é que você não precisa, e na verdade não deveria, incluir a pasta node_modules no seu repositório do GitHub. Isso porque todas as informações necessárias para recriar essa pasta estão no arquivo package.json. Quando alguém clona seu repositório e executa "npm install" ou "yarn", o Node.js lê o arquivo package.json e baixa todas as dependências listadas nele, recriando a pasta node_modules novamente.
+
+    - Observe que na sua pasta existe um arquivo chamado .gitignore que contém o nome da pasta a ser ignorada ou demais arquivos a serem ignorados, no caso a pasta nodemodules. Isso faz com que a pasta seja excluída quando o projeto é enviado para o git, o arquivo gitignore ele serve para ignorar alguns arquivos e não entre no commit/push para o repositório. "Mas isso é bom ou ruim?" Como você disse, a pasta é bem pesada, por isso não vale a pena levar todo esse "peso" para o GitHub. Imagine que nós dois temos máquinas que processam determinado produto. Então, já que eu tenho o maquinário para processar esse produto, eu quero apenas o produto. O seu maquinário não é interessante, já que eu tenho o meu o mesmo faz o mesmo que o seu. E, tratando-se de hospedagem, seria um peso desnecessário.
+
+- Aula 8 - JSX, Aula 9 Estrutura e Aula 10 React Fragment:
+
+    - Escrevendo marcação com JSX:
+
+        - JSX é uma extensão de sintaxe para JavaScript que permite que você escreva marcação semelhante a HTML dentro de um arquivo JavaScript. Embora existam outras maneiras de escrever componentes, a maioria dos desenvolvedores React prefere a concisão do JSX, e a maioria das bases de código o usa.
+
+    - Você aprenderá:
+
+        - Por que o React mistura marcação com lógica de renderização.
+        - Como JSX é diferente de HTML. 
+        - Como exibir informações com JSX.
+        - JSX: Colocando marcação em JavaScript.
+
+    - A Web foi construída em HTML, CSS e JavaScript. Por muitos anos, os desenvolvedores web mantiveram o conteúdo em HTML, o design em CSS e a lógica em JavaScript — geralmente em arquivos separados! O conteúdo era marcado dentro do HTML enquanto a lógica da página vivia separadamente em JavaScript:
+
+    - Marcação HTML com fundo roxo e uma div com duas tags filhas: p e form.
+
+    - HTML: 
+
+        - Três manipuladores JavaScript com fundo amarelo: onSubmit, onLogin e onClick.
+
+    - JavaScript:
+
+        - Mas, à medida que a Web se tornou mais interativa, a lógica determinou cada vez mais o conteúdo. O JavaScript estava no comando do HTML! É por isso que no React, a lógica de renderização e a marcação vivem juntas no mesmo lugar — componentes.
+
+        - Componente React com HTML e JavaScript de exemplos anteriores misturados. O nome da função é Sidebar, que chama a função isLoggedIn, destacada em amarelo. Aninhada dentro da função destacada em roxo está a tag p de antes, e uma tag Form referenciando o componente mostrado no próximo diagrama.
+
+    - Sidebar.jsComponente React:
+
+        - Componente React com HTML e JavaScript de exemplos anteriores misturados. O nome da função é Form contendo dois manipuladores onClick e onSubmit destacados em amarelo. Seguindo os manipuladores está o HTML destacado em roxo. O HTML contém um elemento form com um elemento input aninhado, cada um com uma prop onClick.
+
+    - Form.jsComponente React:
+
+        - Manter a lógica de renderização e a marcação de um botão juntas garante que elas fiquem sincronizadas uma com a outra em cada edição. Por outro lado, detalhes que não são relacionados, como a marcação do botão e a marcação de uma barra lateral, são isolados um do outro, tornando mais seguro alterar qualquer um deles por conta própria.
+
+    - Cada componente React é uma função JavaScript que pode conter alguma marcação que o React renderiza no navegador. Os componentes React usam uma extensão de sintaxe chamada JSX para representar essa marcação. O JSX se parece muito com HTML, mas é um pouco mais rigoroso e pode exibir informações dinâmicas. A melhor maneira de entender isso é converter alguma marcação HTML para marcação JSX.
+
+    - Observação:
+
+        - JSX e React são duas coisas separadas. Eles são frequentemente usados ​​juntos, mas você pode  usá-los independentemente um do outro. JSX é uma extensão de sintaxe, enquanto React é uma biblioteca JavaScript.
+
+    - Convertendo HTML para JSX:
+
+        - Suponha que você tenha algum HTML (perfeitamente válido):
+
+            <h1>Hedy Lamarr's Todos</h1>
+            <img 
+            src="https://i.imgur.com/yXOvdOSs.jpg" 
+            alt="Hedy Lamarr" 
+            class="photo"
+            >
+            <ul>
+                <li>Invent new traffic lights
+                <li>Rehearse a movie scene
+                <li>Improve the spectrum technology
+            </ul>
+            E você quer colocá-lo em seu componente:
+
+            export default function TodoList() {
+            return (
+                // ???
+            )
+            }
+
+        - Se você copiar e colar como está, não funcionará:
+
+            export default function TodoList() {
+            return (
+                // This doesn't quite work!
+                <h1>Hedy Lamarr's Todos</h1>
+                <img 
+                src="https://i.imgur.com/yXOvdOSs.jpg" 
+                alt="Hedy Lamarr" 
+                class="photo"
+                >
+                <ul>
+                <li>Invent new traffic lights
+                <li>Rehearse a movie scene
+                <li>Improve the spectrum technology
+                </ul>
+            );
+            }
+
+
+            Error
+            /src/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (5:4)
+
+            3 |     // This doesn't quite work!
+            4 |     <h1>Hedy Lamarr's Todos</h1>
+            > 5 |     <img 
+                |     ^
+            6 |       src="https://i.imgur.com/yXOvdOSs.jpg" 
+            7 |       alt="Hedy Lamarr" 
+            8 |       class="photo"
+
+        - Isso ocorre porque o JSX é mais rigoroso e tem algumas regras a mais que o HTML! Se você ler as mensagens de erro acima, elas o guiarão para corrigir a marcação, ou você pode seguir o guia abaixo.
+
+    - Observação:
+
+        - Na maioria das vezes, as mensagens de erro na tela do React ajudarão você a encontrar onde está o problema. Dê uma lida se você ficar preso!
+
+    - As regras do JSX:
+
+        - 1. Retornar um único elemento raiz("PAI"):
+
+            - Para retornar vários elementos de um componente, envolva-os com uma única tag pai.
+
+                - Por exemplo, você pode usar um <div>:
+
+                    <div>
+                    <h1>Hedy Lamarr's Todos</h1>
+                    <img 
+                        src="https://i.imgur.com/yXOvdOSs.jpg" 
+                        alt="Hedy Lamarr" 
+                        class="photo"
+                    >
+                    <ul>
+                        ...
+                    </ul>
+                    </div>
+
+                - Se você não quiser adicionar nada extra <div>à sua marcação, você pode escrever <> e </> em vez disso:
+
+                    <>
+                    <h1>Hedy Lamarr's Todos</h1>
+                    <img 
+                        src="https://i.imgur.com/yXOvdOSs.jpg" 
+                        alt="Hedy Lamarr" 
+                        class="photo"
+                    >
+                    <ul>
+                        ...
+                    </ul>
+                    </>
+
+                - Essa tag vazia é chamada de Fragment. Fragments permitem que você agrupe coisas sem deixar rastros na árvore HTML do navegador.
+
+    - Mergulho profundo:
+
+        - Por que várias tags JSX precisam ser encapsuladas?
+
+            - JSX parece HTML, mas por baixo do capô ele é transformado em objetos JavaScript simples. Você não pode retornar dois objetos de uma função sem envolvê-los em um array. Isso explica por que você também não pode retornar duas tags JSX sem envolvê-las em outra tag ou um Fragment.
+
+    - 2. Feche todas as tags:
+
+        - O JSX exige que as tags sejam fechadas explicitamente: tags de fechamento automático como <img> devem se tornar <img />, e tags de encapsulamento como <li> oranges devem ser escritas como <li>oranges</li>.
+
+        - É assim que a imagem e os itens da lista de Hedy Lamarr ficam fechados:
+
+            <>
+            <img 
+                src="https://i.imgur.com/yXOvdOSs.jpg" 
+                alt="Hedy Lamarr" 
+                class="photo"
+            />
+            <ul>
+                <li>Invent new traffic lights</li>
+                <li>Rehearse a movie scene</li>
+                <li>Improve the spectrum technology</li>
+            </ul>
+            </>
+
+    - 3. camelCase a maioria das coisas!:
+
+        - JSX se transforma em JavaScript e atributos escritos em JSX se tornam chaves de objetos JavaScript. Em seus próprios componentes, você frequentemente desejará ler esses atributos em variáveis. Mas JavaScript tem limitações em nomes de variáveis. Por exemplo, seus nomes não podem conter traços ou ser palavras reservadas como class.
+
+        - É por isso que, no React, muitos atributos HTML e SVG são escritos em camelCase. Por exemplo, em vez de stroke-width você usa strokeWidth. Como classé uma palavra reservada, no React você escreve className, nomeado após a propriedade DOM correspondente:
+
+            <img 
+            src="https://i.imgur.com/yXOvdOSs.jpg" 
+            alt="Hedy Lamarr" 
+            className="photo"
+            />
+
+        - Você pode encontrar todos esses atributos na lista de props do componente DOM. Se você errar um, não se preocupe — o React imprimirá uma mensagem com uma possível correção no console do navegador.
+
+    - Armadilha:
+
+        - Por razões históricas, aria-*os data-*atributos são escritos como em HTML, com traços.
+
+    - Dica profissional: use um conversor JSX:
+
+        - Converter todos esses atributos em marcação existente pode ser tedioso! Recomendamos usar um conversor para traduzir seu HTML e SVG existentes para JSX. Conversores são muito úteis na prática, mas ainda vale a pena entender o que está acontecendo para que você possa escrever JSX confortavelmente por conta própria.
+
+    - Aqui está seu resultado final:
+
+        export default function TodoList() {
+        return (
+            <>
+            <h1>Hedy Lamarr's Todos</h1>
+            <img 
+                src="https://i.imgur.com/yXOvdOSs.jpg" 
+                alt="Hedy Lamarr" 
+                className="photo" 
+            />
+            <ul>
+                <li>Invent new traffic lights</li>
+                <li>Rehearse a movie scene</li>
+                <li>Improve the spectrum technology</li>
+            </ul>
+            </>
+        );
+        }
+
+    - Recapitular:
+
+        - Agora você sabe por que o JSX existe e como usá-lo em componentes:
+
+            - Os componentes do React agrupam a lógica de renderização junto com a marcação porque eles são relacionados.
+            - JSX é similar ao HTML, com algumas diferenças. Você pode usar um conversor se precisar.
+            - Mensagens de erro geralmente indicam a direção certa para corrigir sua marcação.
+
+    - JavaScript em JSX com chaves:
+
+        - A sintaxe JSX permite que você escreva tags similares ao HTML dentro de um arquivo JavaScript, mantendo a lógica de renderização e o conteúdo no mesmo local. Às vezes, você pode querer adicionar um pouco de lógica JavaScript ou referenciar uma propriedade dinâmica dentro deste bloco de tags. Nessa situação, você pode usar chaves em seu JSX para abrir uma janela para o JavaScript.
+
+    - Você aprenderá:
+
+        - Como passar strings com aspas.
+        - Como fazer referência a uma variável JavaScript dentro do JSX usando chaves.
+        - Como chamar uma função JavaScript dentro da JSX com chaves.
+        - Como usar um objeto JavaScript dentro da JSX com chaves.
+        
+    - Passando strings com aspas.
+        
+        - Quando você quiser passar um atributo de string para a JSX, coloque-o entre aspas simples ou duplas:
+
+            export default function Avatar() {
+            return (
+                <img
+                className="avatar"
+                src="https://i.imgur.com/7vQD0fPs.jpg"
+                alt="Gregorio Y. Zara"
+                />
+            );
+            }
+
+        - Neste caso, "https://i.imgur.com/7vQD0fPs.jpg" e "Gregorio Y. Zara" estão sendo passados como strings.
+
+        - Mas e se você quiser especificar dinamicamente o atributo src ou alt? Você poderia usar um valor do JavaScript substituindo " e " por { e }:
+
+            export default function Avatar() {
+            const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+            const description = 'Gregorio Y. Zara';
+            return (
+                <img
+                className="avatar"
+                src={avatar}
+                alt={description}
+                />
+            );
+            }
+
+
+        - Perceba a diferença entre className="avatar", que especifica um nome de classe CSS "avatar" para tornar a imagem redonda, e src={avatar}, que lê o valor da variável JavaScript chamada avatar. Isso ocorre porque as chaves permitem que você trabalhe com JavaScript diretamente em seu bloco de tags!
+
+    - Usando chaves: Uma janela para o mundo do JavaScript.
+
+        - JSX é uma forma especial de escrever JavaScript. Isso significa que é possível usar JavaScript dentro dela - com chaves { }. O exemplo abaixo primeiro declara um nome para o cientista, name, e depois o insere o dentro do <h1> com chaves:
+
+            export default function TodoList() {
+            const name = 'Gregorio Y. Zara';
+            return (
+                <h1>{name}'s To Do List</h1>
+            );
+            }
+
+
+        - Tente trocar o valor do name de 'Gregorio Y. Zara' para 'Hedy Lamarr'. Está vendo como o título da lista muda?
+
+        - Qualquer expressão JavaScript funcionará entre chaves, incluindo chamadas de função como formatDate():
+
+            const today = new Date();
+
+            function formatDate(date) {
+            return new Intl.DateTimeFormat(
+                'en-US',
+                { weekday: 'long' }
+            ).format(date);
+            }
+
+            export default function TodoList() {
+            return (
+                <h1>To Do List for {formatDate(today)}</h1>
+            );
+            }
+
+    - Onde usar chaves:
+
+        - Você só pode usar chaves de duas maneiras dentro da JSX:
+
+        - Como texto diretamente dentro de uma tag JSX: <h1>{nome}'s To Do List</h1> funciona, porém <{tag}>Gregorio Y. Zara's To Do List</{tag}> não funcionará.
+
+        - Como atributos imediatamente após o sinal =: src={avatar} lerá a variável avatar, mas src="{avatar}" passará a string "{avatar}".
+
+        - Uso de “chaves duplas”: CSS e outros objetos em JSX:
+
+            - Além de strings, números e outras expressões JavaScript, você pode até passar objetos em JSX. Os objetos também são denotados por chaves, como { name: "Hedy Lamarr", inventions: 5 }. Portanto, para passar um objeto JS em JSX, você deve envolver o objeto em outro par de chaves: person={{ name: "Hedy Lamarr", inventions: 5 }}.
+
+        - Você pode ver isso com estilos CSS em linha na JSX. O React não exige que você use estilos inline (as classes CSS funcionam muito bem na maioria dos casos). Mas quando você precisa de um estilo inline, você passa um objeto para o atributo style:
+
+            export default function TodoList() {
+            return (
+                <ul style={{
+                backgroundColor: 'black',
+                color: 'pink'
+                }}>
+                <li>Improve the videophone</li>
+                <li>Prepare aeronautics lectures</li>
+                <li>Work on the alcohol-fuelled engine</li>
+                </ul>
+            );
+            }
+
+    - Tente alterar os valores de backgroundColor e color.
+
+        - Você pode ver claramente o objeto JavaScript dentro das chaves quando o escreve dessa forma:
+
+            <ul style={
+            {
+                backgroundColor: 'black',
+                color: 'pink'
+            }
+            }>
+
+        - Da próxima vez que você encontrar {{ e }} em JSX, saiba que isso é nada mais do que um objeto dentro das chaves da JSX!
+
+    - Armadilha:
+
+        - As propriedades de style em linha são escritas em camelCase. Por exemplo, o HTML <ul style="background-color: black"> seria escrito como <ul style={{ backgroundColor: 'black' }}> em seu componente.
+
+    - Mais diversão com objetos JavaScript e chaves:
+
+        - Você pode colocar várias expressões dentro de um objeto e referenciá-las em seu JSX dentro de chaves:
+
+            const person = {
+            name: 'Gregorio Y. Zara',
+            theme: {
+                backgroundColor: 'black',
+                color: 'pink'
+            }
+            };
+
+            export default function TodoList() {
+            return (
+                <div style={person.theme}>
+                <h1>{person.name}'s Todos</h1>
+                <img
+                    className="avatar"
+                    src="https://i.imgur.com/7vQD0fPs.jpg"
+                    alt="Gregorio Y. Zara"
+                />
+                <ul>
+                    <li>Improve the videophone</li>
+                    <li>Prepare aeronautics lectures</li>
+                    <li>Work on the alcohol-fuelled engine</li>
+                </ul>
+                </div>
+            );
+            }
+
+        - Neste exemplo, o objeto JavaScript person contém uma string name e um objeto theme:
+
+            const person = {
+            name: 'Gregorio Y. Zara',
+            theme: {
+                backgroundColor: 'black',
+                color: 'pink'
+            }
+            };
+
+        - O componente pode usar os valores de person da seguinte forma:
+
+            <div style={person.theme}>
+            <h1>{person.name}'s Todos</h1>
+
+        - JSX é uma linguagem de modelação mínima, pois permite que você organize dados e lógica usando JavaScript.
+
+    - Recapitular:
+
+        - Agora você sabe quase tudo sobre JSX:
+
+            - Os atributos JSX entre aspas são passados como strings.
+            - As chaves permitem que você inclua a lógica e as variáveis do JavaScript em seu bloco de tags.
+            - Elas funcionam dentro do conteúdo da tag JSX ou imediatamente após = em atributos.
+            - {{ e }} não é uma sintaxe especial: é um objeto JavaScript colocado entre chaves JSX.
