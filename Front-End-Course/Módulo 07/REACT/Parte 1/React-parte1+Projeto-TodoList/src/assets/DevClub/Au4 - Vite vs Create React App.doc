@@ -1,0 +1,15 @@
+- Aula 4 - Vite VS Create React App:
+
+    - O Vite e o Create React App (CRA) são ferramentas para criar aplicativos React. O Vite é mais rápido, flexível e fácil de configurar do que o CRA. 
+        
+        - Ferramentas -> vite / Create React App (CRA):
+        - Configuração -> fázil de configurar / configuração tradicional.
+        - Velocidade -> Mais rápido / Pode demorar mais para rodar ou buildar a aplicação.
+        - Flexibilidade -> Mais flexível / Pode ter menos opções de configuração.
+        - Comando para iniciar app -> npm run dev / npm start
+      
+    - O Vite é uma ferramenta que resolve problemas comuns no desenvolvimento JavaScript e TypeScript. Ele oferece suporte nativo para frameworks como o React.
+
+    - O CRA é uma opção popular para desenvolvedores React que preferem uma abordagem mais tradicional de configuração de projetos. Ele é uma boa maneira de começar um single-page application em React.
+
+    - O Vite introduz o conceito de "carregamento rápido" (fast refresh), que permite um desenvolvimento mais ágil.

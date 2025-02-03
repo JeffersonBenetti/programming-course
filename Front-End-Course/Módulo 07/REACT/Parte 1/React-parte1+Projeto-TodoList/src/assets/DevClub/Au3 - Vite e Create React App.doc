@@ -1,0 +1,28 @@
+- Aula 3 - Vite e Create React App:
+
+     - O Vite é uma ferramenta para criar aplicações React, enquanto o Create React App (CRA) é um ambiente para aprender React. O Vite é uma alternativa ao CRA, que não é mais recomendado para novos projetos. 
+      
+    - Vite:
+        
+        - É uma ferramenta que oferece suporte nativo para frameworks como o React.
+        - Tem uma configuração simples e intuitiva.
+        - Oferece recarregamento rápido, permitindo ver alterações instantaneamente no navegador.
+        - Gera pacotes menores, o que resulta em tempos de carregamento mais rápidos.
+        - É extensível através da sua API de Extensão e API de JavaScript.
+
+    - Create React App (CRA):
+        
+        - É um ambiente confortável para aprender React.
+        - É uma boa opção para começar um single-page application em React.
+        - Não lida com lógica de backend nem banco de dados.
+        - Deixou de ser mantido desde 2023, o que significa que não irá mais receber nenhuma atualização.
+
+    - Para criar um projeto React com Vite, você pode seguir os seguintes passos: 
+
+        - Instalar o NPM.
+        - Abrir o terminal de comando e escrever o script npm.
+        - Executar o comando npm create vite@lates my-react-app  --template react.
+        - Escolher a opção React na lista.
+        - Executar o comando cd my-react-app.
+        - Executar o comando npm install.
+        - Executar o comando npm run dev.

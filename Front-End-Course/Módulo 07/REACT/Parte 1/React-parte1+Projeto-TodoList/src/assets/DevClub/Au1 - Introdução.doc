@@ -1,0 +1,22 @@
+- Aula 01 - Introdução:
+
+    - React é uma biblioteca de JavaScript que permite criar interfaces de usuário (UI). Ele é usado para desenvolver aplicações web, como o Facebook. 
+
+    - O React é uma linguagem de programação declarativa, o que significa que se preocupa com o que o programador quer fazer, e não com como atingir o objetivo. 
+
+    - O React é usado para: 
+
+        - Controlar elementos dinâmicos, como botões, imagens e banners.
+        - Atualizar informações em tempo real, como gráficos, datas e rankings.
+        - Otimizar o carregamento e a velocidade de um site.
+        - Melhorar a experiência do usuário (UX).
+        - Melhorar o posicionamento do site em rankings de busca (SEO).
+
+    - O React tem um ecossistema de outras bibliotecas JavaScript que cuidam de outros aspectos das aplicações, como: 
+
+        - Roteamento.
+        - Controle de estado.
+        - Autenticação.
+        - Armazenamento.
+        - Consumo de API's.
+        - Testes.

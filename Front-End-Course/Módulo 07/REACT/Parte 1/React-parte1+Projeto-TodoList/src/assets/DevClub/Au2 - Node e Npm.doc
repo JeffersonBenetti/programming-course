@@ -1,0 +1,12 @@
+- Aula 02 - Node e NPM:
+
+    - O NPM é o gerenciador de pacotes do Node que vem junto em sua instalação. Para verificar a versão do NPM instalada, você pode executar o seguinte comando:
+
+        -npm --version
+
+    - O Node apenas executa os scripts, enquanto o NPM é de onde baixamos os pacotes que desejamos utilizar.
+    - Por exemplo, se você precisa redimensionar uma imagem, você pode usar uma biblioteca já pronta, disponibilizada através do NPM.
+    - Isto acontece em outras tecnologias como o Nuget na Microsoft e o Dart Packages no Flutter.
+    - A maior diferença do NPM é que o Node em si não vem com nada "pronto", então quase tudo que utilizamos são pacotes.
+    - Os pacotes da nossa aplicação ficam armazenados na pasta NODE_MODULES, na raiz da mesma.
+    - Podemos instalar os pacotes localmente ou globalmente, sendo que os pacotes globais, ficam disponíveis no terminal.

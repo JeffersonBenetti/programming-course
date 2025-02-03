@@ -1,0 +1,27 @@
+- Aula 5 - Package.json:
+    
+    - O arquivo package.json é um arquivo JSON que contém informações importantes sobre um projeto JavaScript ou Node.js. Ele é usado para gerenciar dependências, scripts, versão e outros aspectos do projeto.
+
+    - O package.json é fundamental para qualquer projeto Node.js. Ele é necessário antes de publicar o projeto no NPM.
+
+    - O package.json contém informações como: 
+        
+        - Nome do projeto.
+        - Versão do projeto.
+        - Autor do projeto.
+        - Licença do projeto.
+        - Palavras-chave que descrevem o projeto.
+        - Dependências do projeto.
+
+    - Para criar um arquivo package.json, você pode: 
+
+        - Abrir o terminal na pasta raiz do projeto.
+        - Digitar o comando "npm init".
+        - Seguir as instruções do assistente para incluir as informações desejadas.
+
+    - O package.json é importante porque: 
+
+        - Ajuda o gerenciador de pacotes do Node a lidar com o projeto de forma mais eficiente.
+        - Define atributos funcionais do projeto que o NPM usa para instalar dependências.
+        - Permite executar scripts automatizados.
+        - Define a receita para executar um projeto.

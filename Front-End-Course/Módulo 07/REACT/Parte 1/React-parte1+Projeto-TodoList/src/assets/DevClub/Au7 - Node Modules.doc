@@ -1,0 +1,7 @@
+- Aula 7 - Node Modules:
+
+    - A pasta node_modules é onde o Node.js armazena todas as dependências do seu projeto. Ela é gerada automaticamente quando você executa o comando "npm install" ou "yarn", com base nas informações do arquivo package.json do seu projeto.
+
+    - A boa notícia é que você não precisa, e na verdade não deveria, incluir a pasta node_modules no seu repositório do GitHub. Isso porque todas as informações necessárias para recriar essa pasta estão no arquivo package.json. Quando alguém clona seu repositório e executa "npm install" ou "yarn", o Node.js lê o arquivo package.json e baixa todas as dependências listadas nele, recriando a pasta node_modules novamente.
+
+    - Observe que na sua pasta existe um arquivo chamado .gitignore que contém o nome da pasta a ser ignorada ou demais arquivos a serem ignorados, no caso a pasta nodemodules. Isso faz com que a pasta seja excluída quando o projeto é enviado para o git, o arquivo gitignore ele serve para ignorar alguns arquivos e não entre no commit/push para o repositório. "Mas isso é bom ou ruim?" Como você disse, a pasta é bem pesada, por isso não vale a pena levar todo esse "peso" para o GitHub. Imagine que nós dois temos máquinas que processam determinado produto. Então, já que eu tenho o maquinário para processar esse produto, eu quero apenas o produto. O seu maquinário não é interessante, já que eu tenho o meu o mesmo faz o mesmo que o seu. E, tratando-se de hospedagem, seria um peso desnecessário.
