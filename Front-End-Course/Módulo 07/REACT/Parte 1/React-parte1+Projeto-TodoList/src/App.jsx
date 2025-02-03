@@ -1,10 +1,18 @@
 
 function App() {
 
+  function inputMudou(event){
+    console.log(event.target.value)
+  }
+
+  function cliqueiNoBotão(){
+    console.log('Botão clicado')
+  }
+
   return (
     <div>
-      <input placeholder="O que tenho para fazer.." />
-      <button>Adicionar</button>
+      <input onChange={inputMudou} placeholder="O que tenho para fazer.." />
+      <button onClick={cliqueiNoBotão}>Adicionar</button>
 
       <ul>
         <li>Levar o nico para passear</li>
