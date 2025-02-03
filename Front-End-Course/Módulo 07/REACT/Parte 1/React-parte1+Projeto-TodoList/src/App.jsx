@@ -1,5 +1,15 @@
+import { v4 as uuid } from 'uuid';
 
 function App() {
+
+  // Aula 12 - Map.
+  // const list = ["Esquentar comida", "Terminar o módulo React parte 1"]
+  
+  // Aula 13 - Key e 14 - Bibliotéca "uuid".
+  const list = [
+    {id: uuid(), task: 'Terminar o módulo React parte 1'},
+    {id: uuid(), task: 'Esquentar comida'}
+  ]
 
   // Aula 11 - Eventos.
   function inputMudou(event){
@@ -17,9 +27,12 @@ function App() {
       <button onClick={cliqueiNoBotão}>Adicionar</button>
 
       <ul>
-        <li>Levar o nico para passear</li>
-        <li>Comprar pão</li>
-        <li>Terminar parte 1 do React</li>
+        {
+          // Aula 12 - Map.
+          list.map( item => (
+            <li key={item.id}>{item.task}</li>
+          ))
+        }
       </ul>
     </div>
   )
