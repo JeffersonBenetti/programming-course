@@ -19,3 +19,5 @@
 
         - Para usar as props, é possível passar funções via props e definir valores padrão para as mesmas. 
         - É possível nomear props a partir do ponto de vista do próprio componente
+
+- Aula 28 - Alterando a cor das tarefas concluídas.
