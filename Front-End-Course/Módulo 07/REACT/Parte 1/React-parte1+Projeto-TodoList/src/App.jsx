@@ -26,10 +26,16 @@ function App() {
     setList([...list, { id: uuid(), task, finished: false }])
   }
 
-  function concluirTarefa(id){    
-    const  newList = list.map( item => (
-      item.id === id ? {...item, finished: !item.finished} : item
-    )) 
+  function concluirTarefa(id) {
+    const newList = list.map(item => (
+      item.id === id ? { ...item, finished: !item.finished } : item
+    ))
+
+    setList(newList)
+  }
+
+  function deletarTarefa(id) {
+    const newList = list.filter(item => item.id !== id)
 
     setList(newList)
   }
@@ -48,7 +54,7 @@ function App() {
               <ListItem key={item.id} $isFinished={item.finished}>
                 <CgCheck onClick={() => concluirTarefa(item.id)} />
                 <li>{item.task}</li>
-                <CgTrash />
+                <CgTrash onClick={() => deletarTarefa(item.id)} />
               </ListItem>
             ))
           }
