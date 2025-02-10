@@ -1,7 +1,7 @@
 function Movies() {
 
     return (
-        <div>            
+        <div>
             <h1>Movies</h1>
             <p>Essa é a Movies</p>
         </div>
