@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import api from '../../services/api.js'
-import { Background, Container, Info, Poster } from './styles.js'
+import Button from '../../components/Button/index.jsx'
+import { Background, Container, Info, ContainerButtons, Poster } from './styles.js'
 
 function Home() {
   const [movie, setMovie] = useState()
@@ -12,7 +13,7 @@ function Home() {
       // Desestruturação.
       const { data: { results } } = await api.get('/movie/popular')
 
-      setMovie(results[1])
+      setMovie(results[0])
       console.log(results[0])
     }
 
@@ -29,6 +30,11 @@ function Home() {
             <Info>
               <h1>{movie.title}</h1>
               <p>{movie.overview}</p>
+
+              <ContainerButtons>
+                <Button red>Assista Agora</Button>
+                <Button>Assista o Trailer</Button>
+              </ContainerButtons>
             </Info>
             <Poster>
               <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt='Capa-do-filme' />

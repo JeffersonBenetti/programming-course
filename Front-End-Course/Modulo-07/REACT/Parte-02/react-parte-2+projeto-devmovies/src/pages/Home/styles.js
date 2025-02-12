@@ -34,17 +34,22 @@ export const Info = styled.div`
     width: 50%;
 
     h1 {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 700;
         color: #fff;
     }
 
     p {
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 400;
         color: #fff;
         margin: 30px 0 20px;
     }
+`
+export const ContainerButtons = styled.div`
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
 `
 
 export const Poster = styled.div`
