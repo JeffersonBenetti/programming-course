@@ -10,6 +10,9 @@ import { Background, Container, Info, ContainerButtons, Poster } from './styles.
 function Home() {
   const [movie, setMovie] = useState()
   const [topMovies, setTopMovies] = useState()
+  const [series, setSeries] = useState()
+  const [topSeries, setTopSeries] = useState()
+  const [popularArt, setPopularArt] = useState()
 
   // Usado quando você quer que uma coisa seja chamada só uma vez.
   useEffect(() => {
@@ -27,8 +30,32 @@ function Home() {
       setTopMovies(results)
     }
 
+    async function getSeries() {
+      // Desestruturação.
+      const { data: { results } } = await api.get('/tv/top_rated')
+
+      setSeries(results)
+    }
+
+    async function getTopSeries() {
+      // Desestruturação.
+      const { data: { results } } = await api.get('/tv/popular')
+
+      setTopSeries(results)
+    }
+
+    async function getPopularArt() {
+      // Desestruturação.
+      const { data: { results } } = await api.get('/person/popular')
+
+      setPopularArt(results)
+    }
+
     getMovies()
     getTopMovies()
+    getSeries()
+    getTopSeries()
+    getPopularArt()
   }, [])
 
   return (
@@ -55,6 +82,9 @@ function Home() {
         </Background>
       )}
       {topMovies && <Slider info={topMovies} title={'Top Filmes'} />}
+      {series && <Slider info={series} title={'Top Series'} />}
+      {topSeries && <Slider info={topSeries} title={'Series Populares'} />}
+      {popularArt && <Slider info={popularArt} title={'Artitas Populares'} />}
     </>
   );
 }
