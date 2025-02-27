@@ -15,14 +15,14 @@ export const Background = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.5);
     }
 `
 
 export const Container = styled.div`
-    max-width: 1500px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
