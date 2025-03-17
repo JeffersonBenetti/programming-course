@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react'
-import api from '../../services/api.js'
+import { getMovie } from '../../services/getData.js'
 
 import { Container, Background, Button } from './styles.js'
 
-function Modal({ movieId, setShowModal}) {
+function Modal({ movieId, setShowModal }) {
 
     const [movie, setMovie] = useState()
 
     useEffect(() => {
         async function getMovies() {
-            // Desestruturação.
-            const { data: { results } } = await api.get(`/movie/${movieId}/vídeos`)
-
-            console.log(results[0])
-            setMovie(results[0])
+            setMovie(await getMovieVideos(movieId))
         }
 
         getMovies()
@@ -23,13 +19,13 @@ function Modal({ movieId, setShowModal}) {
         <Background onClick={() => setShowModal(false)}>
             <Button>X</Button>
             <Container>
-                    <iframe
-                        src={`https://www.youtube.com/embed/FEDv_feBLho?si=FkszpYRudX4wtGzY`}
-                        title='Youtube Video Player'
-                        height='400px'
-                        width='100%'
-                    ></iframe>
-                </Container>
+                <iframe
+                    src={`https://www.youtube.com/embed/FEDv_feBLho?si=FkszpYRudX4wtGzY`}
+                    title='Youtube Video Player'
+                    height='400px'
+                    width='100%'
+                ></iframe>
+            </Container>
         </Background>
     )
 }

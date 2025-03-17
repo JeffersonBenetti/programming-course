@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 
-import api from '../../services/api.js'
 import getImages from '../../utils/getImagens.js'
 import Button from '../../components/Button'
 import Slider from '../../components/Slider'
 import Modal from '../../components/Modal'
 
 import { Background, Container, Info, ContainerButtons, Poster } from './styles.js'
+import { getMovies, getPopularArt, getSeries, getTopMovies, getTopSeries } from '../../services/getData.js'
 
 function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -18,46 +18,23 @@ function Home() {
 
   // Usado quando você quer que uma coisa seja chamada só uma vez.
   useEffect(() => {
-    async function getMovies() {
-      // Desestruturação.
-      const { data: { results } } = await api.get('/movie/popular')
-
-      setMovie(results[0])
+    async function getAllData() {
+      Promise.all([
+        getMovies(),
+        getTopMovies(),
+        getSeries(),
+        getTopSeries(),
+        getPopularArt()
+      ]).then(([movie, topMovies, series, topSeries, popularArt]) => {
+        setMovie(movie)
+        setTopMovies(topMovies)
+        setSeries(series)
+        setTopSeries(topSeries)
+        setPopularArt(popularArt)
+      }).catch(error => console.error(error))
     }
 
-    async function getTopMovies() {
-      // Desestruturação.
-      const { data: { results } } = await api.get('/movie/top_rated')
-
-      setTopMovies(results)
-    }
-
-    async function getSeries() {
-      // Desestruturação.
-      const { data: { results } } = await api.get('/tv/top_rated')
-
-      setSeries(results)
-    }
-
-    async function getTopSeries() {
-      // Desestruturação.
-      const { data: { results } } = await api.get('/tv/popular')
-
-      setTopSeries(results)
-    }
-
-    async function getPopularArt() {
-      // Desestruturação.
-      const { data: { results } } = await api.get('/person/popular')
-
-      setPopularArt(results)
-    }
-
-    getMovies()
-    getTopMovies()
-    getSeries()
-    getTopSeries()
-    getPopularArt()
+    getAllData()
   }, [])
 
   return (
@@ -66,7 +43,7 @@ function Home() {
       {movie && (
 
         <Background $img={getImages(movie.backdrop_path)} alt='Capa-do-Filme'>
-          {showModal && <Modal movieId={movie.id} setShowModal={setShowModal}/>}
+          {showModal && <Modal movieId={movie.id} setShowModal={setShowModal} />}
 
           <Container>
             <Info>
