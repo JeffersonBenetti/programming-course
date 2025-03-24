@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import getImages from '../../utils/getImagens.js'
+import { useNavigate } from 'react-router-dom'
+
+import { getImages } from '../../utils/getImages.js'
 import Button from '../../components/Button'
 import Slider from '../../components/Slider'
 import Modal from '../../components/Modal'
@@ -15,6 +17,7 @@ function Home() {
   const [series, setSeries] = useState()
   const [topSeries, setTopSeries] = useState()
   const [popularArt, setPopularArt] = useState()
+  const navigate = useNavigate()
 
   // Usado quando você quer que uma coisa seja chamada só uma vez.
   useEffect(() => {
@@ -51,7 +54,7 @@ function Home() {
               <p>{movie.overview}</p>
 
               <ContainerButtons>
-                <Button red>Assista Agora</Button>
+                <Button red onClick={() => navigate(`detalhe/${movie.id}`)}>Assista Agora</Button>
                 <Button onClick={() => setShowModal(true)}>Assista o Trailer</Button>
               </ContainerButtons>
             </Info>

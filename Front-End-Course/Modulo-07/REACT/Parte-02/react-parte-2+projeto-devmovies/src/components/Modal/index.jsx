@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getMovie } from '../../services/getData.js'
+import { getMovieVideos } from '../../services/getData.js'
 
 import { Container, Background, Button } from './styles.js'
 

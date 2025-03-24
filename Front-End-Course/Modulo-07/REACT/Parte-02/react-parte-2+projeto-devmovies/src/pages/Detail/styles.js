@@ -10,24 +10,21 @@ const scale = keyframes`
 `
 
 export const Background = styled.div`
-    background-image: url(${ props => props.$img});
-    height: 100vh;
+    background-image: url(${props => props.$image});
+    height: 50vh;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     &::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     &::after {
@@ -42,40 +39,24 @@ export const Background = styled.div`
 `
 
 export const Container = styled.div`
-    max-width: 1200px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 2;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 1500px;
+    margin-top: -100px;
 `
 
-export const Info = styled.div`
+export const Cover = styled.div`
     padding: 20px;
-    width: 50%;
-
-    h1 {
-        font-size: 3em;
-        font-weight: 700;
-        color: #fff;
-    }
-
-    p {
-        font-size: 16px;
-        font-weight: 400;
-        color: #fff;
-        margin: 30px 0 20px;
-    }
-`
-export const ContainerButtons = styled.div`
     display: flex;
-    gap: 15px;
-    margin-top: 30px;
-`
+    align-items: flex-start;
+    height: 100%;
+    z-index: 99;
 
-export const Poster = styled.div`
     img {
-        height: 400px;
-        border-radius: 20px;
+        width: 400px;
+        border-radius: 30px;
         box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
         animation: ${scale} 0.5s linear;
     }
