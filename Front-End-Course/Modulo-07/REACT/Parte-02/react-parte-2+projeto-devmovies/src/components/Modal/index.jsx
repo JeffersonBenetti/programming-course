@@ -16,17 +16,21 @@ function Modal({ movieId, setShowModal }) {
     }, [])
 
     return (
-        <Background onClick={() => setShowModal(false)}>
-            <Button>X</Button>
-            <Container>
-                <iframe
-                    src={`https://www.youtube.com/embed/FEDv_feBLho?si=FkszpYRudX4wtGzY`}
-                    title='Youtube Video Player'
-                    height='400px'
-                    width='100%'
-                ></iframe>
-            </Container>
-        </Background>
+        <>
+            {movie && (
+                <Background onClick={() => setShowModal(false)}>
+                    <Button>X</Button>
+                    <Container>
+                        <iframe
+                            src={`https://www.youtube.com/embed/${movie.key}`}
+                            title='Youtube Video Player'
+                            height='400px'
+                            width='100%'
+                        ></iframe>
+                    </Container>
+                </Background>
+            )}
+        </>
     )
 }
 
